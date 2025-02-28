@@ -7,4 +7,5 @@ interface TaskRepository {
     fun saveTaskList(tasks: List<Task>)
     fun saveTask(task: Task)
     fun deleteTaskList(tasks: List<Task>)
+    fun deleteTaskById(taskId: String)
 }
