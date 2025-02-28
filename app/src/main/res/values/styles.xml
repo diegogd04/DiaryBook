@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="activity_item_color">
+        <item name="android:layout_width">@dimen/activity_item_color_width</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="activity_item_text">
+        <item name="android:padding">@dimen/activity_item_text_padding</item>
+    </style>
+
+</resources>

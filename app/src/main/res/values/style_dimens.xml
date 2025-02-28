@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_item_color_width">10dp</dimen>
+    <dimen name="activity_item_text_padding">20dp</dimen>
+
+</resources>
