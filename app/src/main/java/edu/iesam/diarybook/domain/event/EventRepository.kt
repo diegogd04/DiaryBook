@@ -4,4 +4,5 @@ interface EventRepository {
 
     fun getEventList(): List<Event>
     fun getEventById(eventId: String): Event
+    fun saveEventList(events: List<Event>)
 }
