@@ -7,4 +7,5 @@ interface EventRepository {
     fun saveEventList(events: List<Event>)
     fun saveEvent(event: Event)
     fun deleteEventList(events: List<Event>)
+    fun deleteEventById(eventId: String)
 }
