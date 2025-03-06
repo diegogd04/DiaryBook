@@ -4,8 +4,8 @@ data class Event(
     val id: String,
     val title: String,
     val description: String,
-    val date: Int,
-    val duration: Int,
+    val date: String,
+    val duration: String,
     val old: Boolean,
-    val time: Int
+    val time: String
 )
