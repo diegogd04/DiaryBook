@@ -7,9 +7,9 @@ fun EventDbModel.toModel(): Event {
         this.id,
         this.title,
         this.description,
+        this.time,
         this.date,
         this.duration,
-        this.old,
-        this.time
+        this.old
     )
 }

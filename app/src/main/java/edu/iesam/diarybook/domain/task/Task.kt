@@ -1,9 +1,11 @@
 package edu.iesam.diarybook.domain.task
 
-data class Task(
-    val id: String,
-    val title: String,
-    val description: String,
+import edu.iesam.diarybook.domain.Activity
+
+class Task(
+    id: String,
+    title: String,
+    description: String,
+    time: String,
     val completed: Boolean,
-    val time: String
-)
+) : Activity(id, title, description, time)

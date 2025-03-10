@@ -1,11 +1,13 @@
 package edu.iesam.diarybook.domain.event
 
-data class Event(
-    val id: String,
-    val title: String,
-    val description: String,
+import edu.iesam.diarybook.domain.Activity
+
+class Event(
+    id: String,
+    title: String,
+    description: String,
+    time: String,
     val date: String,
     val duration: String,
     val old: Boolean,
-    val time: String
-)
+) : Activity(id, title, description, time)

@@ -8,7 +8,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"
-        android:name="edu.iesam.diarybook.presentation.event.EventListFragment"
+        android:name="edu.iesam.diarybook.presentation.ActivityListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
