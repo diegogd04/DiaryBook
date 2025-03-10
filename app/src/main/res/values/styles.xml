@@ -10,4 +10,13 @@
         <item name="android:padding">@dimen/activity_item_text_padding</item>
     </style>
 
+    <style name="activity_list_recyclerview">
+        <item name="android:layout_margin">@dimen/activity_list_recyclerview_margin</item>
+    </style>
+
+    <style name="activity_item_cardview">
+        <item name="android:layout_marginTop">@dimen/activity_item_margin</item>
+        <item name="android:layout_marginBottom">@dimen/activity_item_margin</item>
+    </style>
+
 </resources>
