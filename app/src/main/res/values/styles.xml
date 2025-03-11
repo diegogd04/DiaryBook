@@ -19,4 +19,18 @@
         <item name="android:layout_marginBottom">@dimen/activity_item_margin</item>
     </style>
 
+    <style name="bottom_app_bar_today_button">
+        <item name="android:layout_width">@dimen/bottom_app_bar_today_button_size</item>
+        <item name="android:layout_height">@dimen/bottom_app_bar_today_button_size</item>
+        <item name="android:layout_marginBottom">@dimen/bottom_app_bar_today_button_margin</item>
+        <item name="cardCornerRadius">@dimen/bottom_app_bar_today_button_corner_radius</item>
+        <item name="android:backgroundTint">@color/red</item>
+    </style>
+
+    <style name="bottom_app_bar_today_button_image">
+        <item name="android:layout_width">@dimen/bottom_app_bar_today_button_image_size</item>
+        <item name="android:layout_height">@dimen/bottom_app_bar_today_button_image_size</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
 </resources>

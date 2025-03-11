@@ -56,6 +56,9 @@ dependencies {
     implementation(libs.koin.annotations)
     ksp(libs.koin.ksp)
 
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

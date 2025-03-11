@@ -3,4 +3,11 @@
     <string name="app_name">DiaryBook</string>
     <string name="activity_item_text_tool">Título actividad</string>
 
+    <!-- Navigation menu -->
+    <string name="home_title">Inicio</string>
+    <string name="events_title">Eventos</string>
+    <string name="today_title">Hoy</string>
+    <string name="tasks_title">Tareas</string>
+    <string name="profile_title">Perfil</string>
+
 </resources>
