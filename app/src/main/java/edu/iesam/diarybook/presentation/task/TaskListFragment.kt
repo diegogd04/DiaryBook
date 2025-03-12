@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import edu.iesam.diarybook.R
 import edu.iesam.diarybook.databinding.FragmentActivityListBinding
 import edu.iesam.diarybook.domain.task.Task
 import edu.iesam.diarybook.presentation.task.adapter.TaskAdapter
@@ -43,6 +44,7 @@ class TaskListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        toolbarEdit()
         setUpObserver()
         viewModel.loadTasks()
     }
@@ -57,5 +59,9 @@ class TaskListFragment : Fragment() {
 
     private fun bindData(tasks: List<Task>) {
         taskAdapter.submitList(tasks)
+    }
+
+    private fun toolbarEdit() {
+        binding.toolbar.topAppBar.title = getString(R.string.tasks_title)
     }
 }
