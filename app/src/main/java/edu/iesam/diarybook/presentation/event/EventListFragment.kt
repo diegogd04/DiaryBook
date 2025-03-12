@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import edu.iesam.diarybook.R
 import edu.iesam.diarybook.databinding.FragmentActivityListBinding
 import edu.iesam.diarybook.domain.event.Event
 import edu.iesam.diarybook.presentation.event.adapter.EventAdapter
@@ -41,6 +42,7 @@ class EventListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        toolbarEdit()
         setUpObserver()
         viewModel.loadEvents()
     }
@@ -54,5 +56,9 @@ class EventListFragment : Fragment() {
 
     private fun bindData(events: List<Event>) {
         eventAdapter.submitList(events)
+    }
+
+    private fun toolbarEdit() {
+        binding.toolbar.topAppBar.title = getString(R.string.events_title)
     }
 }
