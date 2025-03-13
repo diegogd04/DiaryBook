@@ -3,6 +3,7 @@ package edu.iesam.diarybook.app
 import android.app.Application
 import com.google.firebase.FirebaseApp
 import edu.iesam.diarybook.app.di.AppModule
+import edu.iesam.diarybook.di.event.EventModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import org.koin.ksp.generated.module
@@ -15,7 +16,10 @@ class DiaryBookApplication : Application() {
         FirebaseApp.initializeApp(this)
         startKoin {
             androidContext(this@DiaryBookApplication)
-            modules(AppModule().module)
+            modules(
+                AppModule().module,
+                EventModule().module
+            )
         }
     }
 }
