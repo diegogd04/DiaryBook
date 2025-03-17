@@ -11,5 +11,6 @@ data class TaskEntity(
     @ColumnInfo(name = "title") val title: String,
     @ColumnInfo(name = "description") val description: String,
     @ColumnInfo(name = "time") val time: String,
-    @ColumnInfo(name = "completed") val completed: Boolean
+    @ColumnInfo(name = "completed") val completed: Boolean,
+    @ColumnInfo(name = "created_at") val createdAt: Long
 )

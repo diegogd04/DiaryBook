@@ -7,6 +7,8 @@ import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module
 import org.koin.core.annotation.Single
 
+const val TIME_CACHE = 60 * 1000
+
 @Module
 @ComponentScan("edu.iesam.diarybook")
 class AppModule {
@@ -17,7 +19,7 @@ class AppModule {
             context,
             AppDataBase::class.java,
             "diary-book-database"
-        )
+        ).fallbackToDestructiveMigration()
 
         return db.build()
     }
