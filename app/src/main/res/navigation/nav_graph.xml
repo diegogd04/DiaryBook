@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/event_list_fragment"
-        android:name="edu.iesam.diarybook.presentation.event.EventListFragment"
+        android:name="edu.iesam.diarybook.features.event.presentation.EventListFragment"
         android:label="@string/events_title"
         tools:layout="@layout/fragment_activity_list" />
 
     <fragment
         android:id="@+id/task_list_fragment"
-        android:name="edu.iesam.diarybook.presentation.task.TaskListFragment"
+        android:name="edu.iesam.diarybook.features.task.presentation.TaskListFragment"
         android:label="@string/tasks_title"
         tools:layout="@layout/fragment_activity_list" />
 

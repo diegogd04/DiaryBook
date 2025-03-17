@@ -1,9 +1,9 @@
 package edu.iesam.diarybook.data
 
-import edu.iesam.diarybook.data.event.EventDataRepository
-import edu.iesam.diarybook.data.task.TaskDataRepository
 import edu.iesam.diarybook.domain.Activity
 import edu.iesam.diarybook.domain.ActivityRepository
+import edu.iesam.diarybook.features.event.data.EventDataRepository
+import edu.iesam.diarybook.features.task.data.TaskDataRepository
 import org.koin.core.annotation.Single
 
 @Single

@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import edu.iesam.diarybook.R
 import edu.iesam.diarybook.databinding.ViewActivityItemBinding
 import edu.iesam.diarybook.domain.Activity
-import edu.iesam.diarybook.domain.event.Event
+import edu.iesam.diarybook.features.event.domain.Event
 
 class ActivityViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
 
