@@ -2,7 +2,8 @@ package edu.iesam.diarybook.app
 
 import android.app.Application
 import com.google.firebase.FirebaseApp
-import edu.iesam.diarybook.app.di.AppModule
+import edu.iesam.diarybook.app.di.LocalModule
+import edu.iesam.diarybook.app.di.RemoteModule
 import edu.iesam.diarybook.di.event.EventModule
 import edu.iesam.diarybook.di.task.TaskModule
 import org.koin.android.ext.koin.androidContext
@@ -18,7 +19,8 @@ class DiaryBookApplication : Application() {
         startKoin {
             androidContext(this@DiaryBookApplication)
             modules(
-                AppModule().module,
+                LocalModule().module,
+                RemoteModule().module,
                 EventModule().module,
                 TaskModule().module
             )

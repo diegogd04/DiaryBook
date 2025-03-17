@@ -1,18 +1,15 @@
 package edu.iesam.diarybook.data.event.remote
 
-import com.google.firebase.Firebase
-import com.google.firebase.firestore.firestore
+import com.google.firebase.firestore.FirebaseFirestore
 import edu.iesam.diarybook.domain.event.Event
 import kotlinx.coroutines.tasks.await
 import org.koin.core.annotation.Single
 
 @Single
-class EventFirebaseRemoteDataSource {
-
-    private val db = Firebase.firestore
+class EventFirebaseRemoteDataSource(private val firestore: FirebaseFirestore) {
 
     suspend fun getEventList(): List<Event> {
-        val events = db.collection("events")
+        val events = firestore.collection("events")
             .get()
             .await()
             .map {
