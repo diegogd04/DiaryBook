@@ -11,7 +11,7 @@ const val TIME_CACHE = 60 * 1000
 
 @Module
 @ComponentScan("edu.iesam.diarybook")
-class AppModule {
+class LocalModule {
 
     @Single
     fun provideDataBase(context: Context): AppDataBase {
