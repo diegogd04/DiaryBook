@@ -6,6 +6,6 @@ fun TaskEntity.toModel(): Task {
     return Task(this.id, this.title, this.description, this.time, this.completed)
 }
 
-fun Task.toEntity(): TaskEntity {
-    return TaskEntity(this.id, this.title, this.description, this.time, this.completed)
+fun Task.toEntity(ms: Long): TaskEntity {
+    return TaskEntity(this.id, this.title, this.description, this.time, this.completed, ms)
 }

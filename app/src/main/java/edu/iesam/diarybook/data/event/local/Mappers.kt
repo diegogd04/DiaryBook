@@ -14,7 +14,7 @@ fun EventEntity.toModel(): Event {
     )
 }
 
-fun Event.toEntity(): EventEntity {
+fun Event.toEntity(ms: Long): EventEntity {
     return EventEntity(
         this.id,
         this.title,
@@ -22,6 +22,7 @@ fun Event.toEntity(): EventEntity {
         this.time,
         this.date,
         this.duration,
-        this.old
+        this.old,
+        ms
     )
 }
