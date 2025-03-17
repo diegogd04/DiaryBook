@@ -2,10 +2,10 @@ package edu.iesam.diarybook.app.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import edu.iesam.diarybook.data.event.local.EventDao
-import edu.iesam.diarybook.data.event.local.EventEntity
-import edu.iesam.diarybook.data.task.local.TaskDao
-import edu.iesam.diarybook.data.task.local.TaskEntity
+import edu.iesam.diarybook.features.event.data.local.EventDao
+import edu.iesam.diarybook.features.event.data.local.EventEntity
+import edu.iesam.diarybook.features.task.data.local.TaskDao
+import edu.iesam.diarybook.features.task.data.local.TaskEntity
 
 @Database(entities = [EventEntity::class, TaskEntity::class], version = 3)
 abstract class AppDataBase : RoomDatabase() {
