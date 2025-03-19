@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -59,6 +60,20 @@ class EventListFragment : Fragment() {
     }
 
     private fun toolbarEdit() {
-        binding.toolbar.topAppBar.title = getString(R.string.events_title)
+        binding.toolbar.topAppBar.apply {
+            setBackgroundColor(
+                ContextCompat.getColor(
+                    requireContext(),
+                    R.color.md_theme_secondaryFixedDim_highContrast
+                )
+            )
+            setTitleTextColor(
+                ContextCompat.getColor(
+                    requireContext(),
+                    R.color.md_theme_onSecondaryFixedVariant_highContrast
+                )
+            )
+            title = getString(R.string.events_title)
+        }
     }
 }

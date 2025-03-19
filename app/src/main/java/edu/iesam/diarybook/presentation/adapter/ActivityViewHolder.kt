@@ -13,17 +13,22 @@ class ActivityViewHolder(private val view: View) : RecyclerView.ViewHolder(view)
     private lateinit var binding: ViewActivityItemBinding
 
     fun bind(item: Activity) {
-        var color = 0
-
         binding = ViewActivityItemBinding.bind(view)
-
-        binding.text.text = item.title
-
-        color = if (item is Event) {
-            ContextCompat.getColor(view.context, R.color.blue)
+        val color = if (item is Event) {
+            ContextCompat.getColor(
+                view.context,
+                R.color.md_theme_secondaryFixedDim_highContrast
+            )
         } else {
-            ContextCompat.getColor(view.context, R.color.red)
+            ContextCompat.getColor(view.context, R.color.md_theme_tertiary)
         }
-        binding.color.setBackgroundColor(color)
+
+        binding.apply {
+            text.apply {
+                text = item.title
+            }.setTextColor(color)
+            cardViewItem.strokeColor = color
+            this.color.setBackgroundColor(color)
+        }
     }
 }

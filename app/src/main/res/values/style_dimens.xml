@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="activity_item_color_width">10dp</dimen>
+    <dimen name="activity_item_color_width">20dp</dimen>
     <dimen name="activity_item_text_padding">20dp</dimen>
 
     <dimen name="activity_list_recyclerview_margin">20dp</dimen>
@@ -11,5 +11,7 @@
     <dimen name="bottom_app_bar_today_button_margin">40dp</dimen>
     <dimen name="bottom_app_bar_today_button_corner_radius">40dp</dimen>
     <dimen name="bottom_app_bar_today_button_image_size">50dp</dimen>
+
+    <dimen name="card_view_stroke_width">2dp</dimen>
 
 </resources>
