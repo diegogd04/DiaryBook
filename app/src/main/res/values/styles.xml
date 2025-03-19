@@ -8,7 +8,6 @@
     <style name="activity_item_text">
         <item name="android:padding">@dimen/activity_item_text_padding</item>
         <item name="android:background">@color/md_theme_secondaryContainer</item>
-        <item name="android:textColor">@color/md_theme_secondary</item>
     </style>
 
     <style name="activity_list_recyclerview">
