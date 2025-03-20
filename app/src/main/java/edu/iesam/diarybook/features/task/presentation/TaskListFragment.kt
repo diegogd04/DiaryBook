@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -62,6 +63,10 @@ class TaskListFragment : Fragment() {
     }
 
     private fun toolbarEdit() {
-        binding.toolbar.topAppBar.title = getString(R.string.tasks_title)
+        binding.toolbar.topAppBar.apply {
+            setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.md_theme_tertiary))
+            setTitleTextColor(ContextCompat.getColor(requireContext(), R.color.md_theme_onTertiary))
+            title = getString(R.string.tasks_title)
+        }
     }
 }
