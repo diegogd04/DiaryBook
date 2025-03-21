@@ -50,6 +50,11 @@ dependencies {
 
     implementation(libs.firebase.firestore)
 
+    implementation(libs.firebase.auth)
+    implementation(libs.androidx.credentials)
+    implementation(libs.androidx.credentials.play.services.auth)
+    implementation(libs.googleid)
+
     implementation(libs.lifecyle.viewmodel)
 
     implementation(libs.koin.android)
