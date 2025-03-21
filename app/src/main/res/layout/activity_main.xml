@@ -22,9 +22,10 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation_view"
+            style="@style/bottom_app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:labelVisibilityMode="labeled"
+            app:labelVisibilityMode="unlabeled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/bottom_app_bar" />
 
@@ -39,7 +40,7 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             style="@style/bottom_app_bar_today_button_image"
-            android:src="@drawable/ic_today" />
+            android:src="@drawable/ic_app" />
 
     </androidx.cardview.widget.CardView>
 
