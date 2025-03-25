@@ -10,4 +10,15 @@
     <string name="tasks_title">Tareas</string>
     <string name="profile_title">Perfil</string>
 
+    <!-- Login Fragment -->
+    <string name="login_head_text_title">Hola $name</string>
+    <string name="login_head_text_email">email@gmail.com</string>
+    <string name="login_pending_activities_title">Actividades pendientes</string>
+    <string name="login_completed_activities_title">Actividades completadas</string>
+    <string name="login_events_text">Eventos:</string>
+    <string name="login_tasks_text">Tareas:</string>
+    <string name="login_activities_number">0</string>
+    <string name="login_action_user_logout">Cerrar sesión</string>
+    <string name="login_action_user_delete">Borrar cuenta</string>
+
 </resources>

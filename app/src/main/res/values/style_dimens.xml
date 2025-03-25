@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="activity_item_color_width">20dp</dimen>
-    <dimen name="activity_item_text_padding">20dp</dimen>
+    <!-- Common -->
 
-    <dimen name="activity_list_recyclerview_margin">20dp</dimen>
+    <dimen name="general_margin_padding">20dp</dimen>
+
+    <!-- Activity Item -->
+
+    <dimen name="activity_item_color_width">20dp</dimen>
+
     <dimen name="activity_item_margin">10dp</dimen>
+
+    <!-- Bottom App Bar -->
 
     <dimen name="bottom_app_bar_today_button_size">80dp</dimen>
     <dimen name="bottom_app_bar_today_button_margin">30dp</dimen>
@@ -18,5 +24,19 @@
     <dimen name="bottom_app_bar_indicator_width">70dp</dimen>
     <dimen name="bottom_app_bar_indicator_height">40dp</dimen>
     <dimen name="bottom_app_bar_indicator_margin_horizontal">10dp</dimen>
+
+    <!-- Login Fragment -->
+
+    <dimen name="login_avatar_size">100dp</dimen>
+    <dimen name="login_avatar_card_corner_radius">60dp</dimen>
+
+    <dimen name="login_head_text_email_margin">10dp</dimen>
+
+    <dimen name="login_activities_section_item_text_width">120dp</dimen>
+    <dimen name="login_activities_section_item_text_padding_start">40dp</dimen>
+
+    <dimen name="login_activities_section_item_image_size">50dp</dimen>
+
+    <dimen name="login_divider_small_size">50dp</dimen>
 
 </resources>

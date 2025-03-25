@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/login_component_cardview">
+
+    <LinearLayout style="@style/login_activities_section_item">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/login_activities_section_item_title"
+            android:text="@string/login_pending_activities_title" />
+
+        <com.google.android.material.divider.MaterialDivider style="@style/login_activities_section_item_divider" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/events_title"
+                style="@style/login_activities_section_item_text"
+                android:text="@string/login_events_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/events_cont"
+                style="@style/login_activities_section_item_number"
+                android:text="@string/login_activities_number"
+                app:layout_constraintStart_toEndOf="@+id/events_title"
+                app:layout_constraintTop_toTopOf="@+id/events_title" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image"
+                style="@style/login_activities_section_item_image"
+                android:src="@drawable/ic_right_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.divider.MaterialDivider style="@style/login_activities_section_item_divider_small" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tasks_title"
+                style="@style/login_activities_section_item_text"
+                android:text="@string/login_tasks_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tasks_cont"
+                style="@style/login_activities_section_item_number"
+                android:text="@string/login_activities_number"
+                app:layout_constraintStart_toEndOf="@+id/tasks_title"
+                app:layout_constraintTop_toTopOf="@+id/tasks_title" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                style="@style/login_activities_section_item_image"
+                android:src="@drawable/ic_right_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

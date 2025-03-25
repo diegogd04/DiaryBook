@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Activity Item -->
+
     <style name="activity_item_color">
         <item name="android:layout_width">@dimen/activity_item_color_width</item>
     </style>
 
     <style name="activity_item_text">
-        <item name="android:padding">@dimen/activity_item_text_padding</item>
+        <item name="android:padding">@dimen/general_margin_padding</item>
         <item name="android:background">@color/md_theme_secondaryContainer</item>
-    </style>
-
-    <style name="activity_list_recyclerview">
-        <item name="android:layout_margin">@dimen/activity_list_recyclerview_margin</item>
     </style>
 
     <style name="activity_item_cardview">
@@ -19,6 +17,14 @@
         <item name="android:layout_marginBottom">@dimen/activity_item_margin</item>
         <item name="strokeWidth">@dimen/card_view_stroke_width</item>
     </style>
+
+    <!-- Activity List -->
+
+    <style name="activity_list_recyclerview">
+        <item name="android:layout_margin">@dimen/general_margin_padding</item>
+    </style>
+
+    <!-- Bottom App Bar -->
 
     <style name="bottom_app_bar_today_button">
         <item name="android:layout_width">@dimen/bottom_app_bar_today_button_size</item>
@@ -30,12 +36,6 @@
     <style name="bottom_app_bar_today_button_image">
         <item name="android:layout_width">@dimen/bottom_app_bar_today_button_size</item>
         <item name="android:layout_height">@dimen/bottom_app_bar_today_button_size</item>
-    </style>
-
-    <style name="toolbar">
-        <item name="android:background">@color/md_theme_primary</item>
-        <item name="titleTextColor">@color/md_theme_onPrimary</item>
-        <item name="titleCentered">true</item>
     </style>
 
     <style name="bottom_app_bar">
@@ -54,6 +54,135 @@
             @style/ShapeAppearance.Material3.NavigationBarView.ActiveIndicator
         </item>
         <item name="android:color">@color/md_theme_secondaryFixedDim_highContrast</item>
+    </style>
+
+    <!-- Toolbar -->
+
+    <style name="toolbar">
+        <item name="android:background">@color/md_theme_primary</item>
+        <item name="titleTextColor">@color/md_theme_onPrimary</item>
+        <item name="titleCentered">true</item>
+    </style>
+
+    <!-- Login Fragment -->
+
+    <style name="login_background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/md_theme_primary</item>
+    </style>
+
+    <style name="login_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/general_margin_padding</item>
+    </style>
+
+    <style name="login_avatar">
+        <item name="android:layout_width">@dimen/login_avatar_size</item>
+        <item name="android:layout_height">@dimen/login_avatar_size</item>
+        <item name="cardCornerRadius">@dimen/login_avatar_card_corner_radius</item>
+    </style>
+
+    <style name="login_head_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/general_margin_padding</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="login_head_text_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/md_theme_onPrimary</item>
+        <item name="android:textSize">@dimen/login_head_text_title_text_size</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:autoSizeTextType">uniform</item>
+    </style>
+
+    <style name="login_head_text_email">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/login_head_text_email_margin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/md_theme_onPrimary</item>
+    </style>
+
+    <style name="login_cardview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/general_margin_padding</item>
+    </style>
+
+    <style name="login_component_cardview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/md_theme_primaryContainer</item>
+        <item name="strokeColor">@color/md_theme_primary</item>
+    </style>
+
+    <!-- Login Activities Section Item -->
+
+    <style name="login_activities_section_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="login_activities_section_item_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/general_margin_padding</item>
+        <item name="android:textColor">@color/md_theme_onPrimaryContainer</item>
+        <item name="android:textSize">@dimen/login_activities_section_item_title_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="login_activities_section_item_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="dividerColor">@color/md_theme_primary</item>
+    </style>
+
+    <style name="login_activities_section_item_text">
+        <item name="android:layout_width">@dimen/login_activities_section_item_text_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/general_margin_padding</item>
+        <item name="android:paddingStart">@dimen/login_activities_section_item_text_padding_start
+        </item>
+        <item name="android:textColor">@color/md_theme_onPrimaryContainer</item>
+    </style>
+
+    <style name="login_activities_section_item_number">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/general_margin_padding</item>
+        <item name="android:textColor">@color/md_theme_onPrimaryContainer</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="login_activities_section_item_image">
+        <item name="android:layout_width">@dimen/login_activities_section_item_image_size</item>
+        <item name="android:layout_height">@dimen/login_activities_section_item_image_size</item>
+    </style>
+
+    <style name="login_activities_section_item_divider_small" parent="login_activities_section_item_divider">
+        <item name="dividerInsetStart">@dimen/login_divider_small_size</item>
+        <item name="dividerInsetEnd">@dimen/login_divider_small_size</item>
+    </style>
+
+    <!-- Login Action Item -->
+
+    <style name="login_action_item_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/general_margin_padding</item>
+        <item name="android:textColor">@color/md_theme_onPrimaryContainer</item>
     </style>
 
 </resources>

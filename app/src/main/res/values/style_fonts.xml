@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Login Fragment -->
+
+    <dimen name="login_head_text_title_text_size">40sp</dimen>
+
+    <dimen name="login_activities_section_item_title_size">20sp</dimen>
+
+</resources>
