@@ -48,26 +48,33 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
+    // Firebase Firestore
     implementation(libs.firebase.firestore)
 
+    // Firebase Auth
     implementation(libs.firebase.auth)
     implementation(libs.androidx.credentials)
     implementation(libs.androidx.credentials.play.services.auth)
     implementation(libs.googleid)
 
+    // Lifecycle ViewModel
     implementation(libs.lifecyle.viewmodel)
 
+    // Koin
     implementation(libs.koin.android)
     implementation(libs.koin.annotations)
     ksp(libs.koin.ksp)
 
+    // Navigation
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
 
+    // Room
     implementation(libs.room.runtime)
     ksp(libs.room.ksp)
     implementation(libs.room.coroutines)
 
+    // SplashScreen
     implementation(libs.splashscreen)
 
     testImplementation(libs.junit)

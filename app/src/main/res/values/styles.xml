@@ -2,7 +2,6 @@
 <resources>
 
     <!-- Activity Item -->
-
     <style name="activity_item_color">
         <item name="android:layout_width">@dimen/activity_item_color_width</item>
     </style>
@@ -19,13 +18,11 @@
     </style>
 
     <!-- Activity List -->
-
     <style name="activity_list_recyclerview">
         <item name="android:layout_margin">@dimen/general_margin_padding</item>
     </style>
 
     <!-- Bottom App Bar -->
-
     <style name="bottom_app_bar_today_button">
         <item name="android:layout_width">@dimen/bottom_app_bar_today_button_size</item>
         <item name="android:layout_height">@dimen/bottom_app_bar_today_button_size</item>
@@ -57,7 +54,6 @@
     </style>
 
     <!-- Toolbar -->
-
     <style name="toolbar">
         <item name="android:background">@color/md_theme_primary</item>
         <item name="titleTextColor">@color/md_theme_onPrimary</item>
@@ -65,7 +61,6 @@
     </style>
 
     <!-- Login Fragment y User Fragment -->
-
     <style name="login_background">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -73,7 +68,6 @@
     </style>
 
     <!-- Login Fragment -->
-
     <style name="login_title">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -113,7 +107,6 @@
     </style>
 
     <!-- User Fragment -->
-
     <style name="user_container">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -167,7 +160,6 @@
     </style>
 
     <!-- User Activities Section Item -->
-
     <style name="user_activities_section_item">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -218,7 +210,6 @@
     </style>
 
     <!-- User Action Item -->
-
     <style name="user_action_item_text">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
