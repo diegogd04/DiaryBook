@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/login_background">
+
+    <LinearLayout
+        android:id="@+id/header"
+        style="@style/user_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/avatar"
+            style="@style/user_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:src="@tools:sample/avatars" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            style="@style/user_head_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/avatar"
+            app:layout_constraintTop_toTopOf="@id/avatar">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                style="@style/user_head_text_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/user_head_text_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/email"
+                style="@style/user_head_text_email"
+                tools:text="@string/user_head_text_email" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/user_container"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/header"
+        app:layout_constraintStart_toStartOf="@id/header"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <include
+            android:id="@+id/pending_activities"
+            style="@style/user_cardview"
+            layout="@layout/view_login_activities_section_item" />
+
+        <include
+            android:id="@+id/completed_activities"
+            style="@style/user_cardview"
+            layout="@layout/view_login_activities_section_item" />
+
+        <include
+            android:id="@+id/user_logout"
+            style="@style/user_cardview"
+            layout="@layout/view_login_action_item" />
+
+        <include
+            android:id="@+id/user_delete"
+            style="@style/user_cardview"
+            layout="@layout/view_login_action_item" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,16 +27,30 @@
 
     <!-- Login Fragment -->
 
-    <dimen name="login_avatar_size">100dp</dimen>
-    <dimen name="login_avatar_card_corner_radius">60dp</dimen>
+    <dimen name="login_title_margin_top">150dp</dimen>
 
-    <dimen name="login_head_text_email_margin">10dp</dimen>
+    <dimen name="login_cardview_card_corner_radius">40dp</dimen>
+    <dimen name="login_cardview_card_elevation">10dp</dimen>
 
-    <dimen name="login_activities_section_item_text_width">120dp</dimen>
-    <dimen name="login_activities_section_item_text_padding_start">40dp</dimen>
+    <dimen name="login_cardview_container_padding">10dp</dimen>
+    <dimen name="login_cardview_container_padding_end">30dp</dimen>
 
-    <dimen name="login_activities_section_item_image_size">50dp</dimen>
+    <dimen name="login_cardview_image_size">40dp</dimen>
 
-    <dimen name="login_divider_small_size">50dp</dimen>
+    <dimen name="login_cardview_text_margin_start">20dp</dimen>
+
+    <!-- User Fragment -->
+
+    <dimen name="user_avatar_size">100dp</dimen>
+    <dimen name="user_avatar_card_corner_radius">60dp</dimen>
+
+    <dimen name="user_head_text_email_margin">10dp</dimen>
+
+    <dimen name="user_activities_section_item_text_width">120dp</dimen>
+    <dimen name="user_activities_section_item_text_padding_start">40dp</dimen>
+
+    <dimen name="user_activities_section_item_image_size">50dp</dimen>
+
+    <dimen name="user_divider_small_size">50dp</dimen>
 
 </resources>

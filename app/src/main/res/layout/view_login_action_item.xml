@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/login_component_cardview">
+    style="@style/user_component_cardview">
 
     <com.google.android.material.textview.MaterialTextView
-        style="@style/login_action_item_text"
-        android:text="@string/login_action_user_logout" />
+        style="@style/user_action_item_text"
+        android:text="@string/user_action_user_logout" />
 
 </com.google.android.material.card.MaterialCardView>
