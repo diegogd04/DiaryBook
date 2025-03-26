@@ -23,4 +23,10 @@
         android:label="@string/tasks_title"
         tools:layout="@layout/fragment_activity_list" />
 
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="edu.iesam.diarybook.features.login.presentation.LoginFragment"
+        android:label="@string/login_title"
+        tools:layout="@layout/fragment_login" />
+
 </navigation>

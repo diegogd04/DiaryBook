@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import org.koin.android.annotation.KoinViewModel
 
 @KoinViewModel
-class UserViewModel(private val getUserUseCase: GetUserUseCase) : ViewModel() {
+class LoginViewModel(private val getUserUseCase: GetUserUseCase) : ViewModel() {
 
     private var _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> = _uiState

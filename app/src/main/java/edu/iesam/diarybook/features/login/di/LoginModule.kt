@@ -5,5 +5,5 @@ import org.koin.core.annotation.Module
 
 @Module
 @ComponentScan("edu.iesam.diarybook")
-class UserModule {
+class LoginModule {
 }

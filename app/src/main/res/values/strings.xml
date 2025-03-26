@@ -8,7 +8,7 @@
     <string name="events_title">Eventos</string>
     <string name="today_title">Hoy</string>
     <string name="tasks_title">Tareas</string>
-    <string name="profile_title">Perfil</string>
+    <string name="login_title">Login</string>
 
     <!-- Login Fragment -->
     <string name="login_head_text_title">Hola $name</string>

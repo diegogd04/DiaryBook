@@ -5,7 +5,7 @@ import edu.iesam.diarybook.features.login.domain.User
 import org.koin.core.annotation.Single
 
 @Single
-class UserFirebaseRemoteDataSource(private val auth: FirebaseAuth) {
+class LoginFirebaseRemoteDataSource(private val auth: FirebaseAuth) {
 
     fun getAccount(): User? {
         val user = auth.currentUser?.toModel()
