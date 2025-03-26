@@ -2,17 +2,14 @@
 <resources>
 
     <!-- Common -->
-
     <dimen name="general_margin_padding">20dp</dimen>
 
     <!-- Activity Item -->
-
     <dimen name="activity_item_color_width">20dp</dimen>
 
     <dimen name="activity_item_margin">10dp</dimen>
 
     <!-- Bottom App Bar -->
-
     <dimen name="bottom_app_bar_today_button_size">80dp</dimen>
     <dimen name="bottom_app_bar_today_button_margin">30dp</dimen>
     <dimen name="bottom_app_bar_today_button_corner_radius">40dp</dimen>
@@ -26,7 +23,6 @@
     <dimen name="bottom_app_bar_indicator_margin_horizontal">10dp</dimen>
 
     <!-- Login Fragment -->
-
     <dimen name="login_title_margin_top">150dp</dimen>
 
     <dimen name="login_cardview_card_corner_radius">40dp</dimen>
@@ -40,7 +36,6 @@
     <dimen name="login_cardview_text_margin_start">20dp</dimen>
 
     <!-- User Fragment -->
-
     <dimen name="user_avatar_size">100dp</dimen>
     <dimen name="user_avatar_card_corner_radius">60dp</dimen>
 

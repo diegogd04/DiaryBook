@@ -2,13 +2,11 @@
 <resources>
 
     <!-- User Fragment -->
-
     <dimen name="user_head_text_title_text_size">40sp</dimen>
 
     <dimen name="user_activities_section_item_title_size">20sp</dimen>
 
     <!-- Login Fragment -->
-
     <dimen name="login_title_size">40sp</dimen>
 
 </resources>
