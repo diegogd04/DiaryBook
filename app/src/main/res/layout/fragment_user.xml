@@ -58,22 +58,22 @@
         <include
             android:id="@+id/pending_activities"
             style="@style/user_cardview"
-            layout="@layout/view_login_activities_section_item" />
+            layout="@layout/view_user_activities_section_item" />
 
         <include
             android:id="@+id/completed_activities"
             style="@style/user_cardview"
-            layout="@layout/view_login_activities_section_item" />
+            layout="@layout/view_user_activities_section_item" />
 
         <include
             android:id="@+id/user_logout"
             style="@style/user_cardview"
-            layout="@layout/view_login_action_item" />
+            layout="@layout/view_user_action_item" />
 
         <include
             android:id="@+id/user_delete"
             style="@style/user_cardview"
-            layout="@layout/view_login_action_item" />
+            layout="@layout/view_user_action_item" />
 
     </LinearLayout>
 

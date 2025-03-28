@@ -53,9 +53,6 @@ dependencies {
 
     // Firebase Auth
     implementation(libs.firebase.auth)
-    implementation(libs.androidx.credentials)
-    implementation(libs.androidx.credentials.play.services.auth)
-    implementation(libs.googleid)
 
     // Lifecycle ViewModel
     implementation(libs.lifecyle.viewmodel)

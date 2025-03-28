@@ -7,19 +7,18 @@
     </style>
 
     <style name="activity_item_text">
-        <item name="android:padding">@dimen/general_margin_padding</item>
+        <item name="android:padding">@dimen/medium_margin_padding</item>
         <item name="android:background">@color/md_theme_secondaryContainer</item>
     </style>
 
     <style name="activity_item_cardview">
-        <item name="android:layout_marginTop">@dimen/activity_item_margin</item>
-        <item name="android:layout_marginBottom">@dimen/activity_item_margin</item>
-        <item name="strokeWidth">@dimen/card_view_stroke_width</item>
+        <item name="android:layout_marginVertical">@dimen/small_margin_padding</item>
+        <item name="strokeWidth">@dimen/general_stroke_width</item>
     </style>
 
     <!-- Activity List -->
     <style name="activity_list_recyclerview">
-        <item name="android:layout_margin">@dimen/general_margin_padding</item>
+        <item name="android:layout_margin">@dimen/medium_margin_padding</item>
     </style>
 
     <!-- Bottom App Bar -->
@@ -46,7 +45,7 @@
     <style name="bottom_app_bar_indicator">
         <item name="android:width">@dimen/bottom_app_bar_indicator_width</item>
         <item name="android:height">@dimen/bottom_app_bar_indicator_height</item>
-        <item name="marginHorizontal">@dimen/bottom_app_bar_indicator_margin_horizontal</item>
+        <item name="marginHorizontal">@dimen/small_margin_padding</item>
         <item name="shapeAppearance">
             @style/ShapeAppearance.Material3.NavigationBarView.ActiveIndicator
         </item>
@@ -64,7 +63,7 @@
     <style name="login_background">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@color/md_theme_primary</item>
+        <item name="android:background">@color/md_theme_primaryContainer</item>
     </style>
 
     <!-- Login Fragment -->
@@ -72,26 +71,15 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/login_title_margin_top</item>
-        <item name="android:textColor">@color/md_theme_onPrimary</item>
-        <item name="android:textSize">@dimen/login_title_size</item>
+        <item name="android:textColor">@color/md_theme_tertiary</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
     </style>
 
-    <style name="login_cardview">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="backgroundTint">@color/md_theme_primaryContainer</item>
-        <item name="cardCornerRadius">@dimen/login_cardview_card_corner_radius</item>
-        <item name="cardElevation">@dimen/login_cardview_card_elevation</item>
-    </style>
-
-    <style name="login_cardview_container">
+    <style name="login_container">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:gravity">center</item>
-        <item name="android:paddingTop">@dimen/login_cardview_container_padding</item>
-        <item name="android:paddingBottom">@dimen/login_cardview_container_padding</item>
-        <item name="android:paddingStart">@dimen/login_cardview_container_padding</item>
-        <item name="android:paddingEnd">@dimen/login_cardview_container_padding_end</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/login_cardview_container_padding</item>
+        <item name="android:orientation">vertical</item>
     </style>
 
     <style name="login_cardview_image">
@@ -102,15 +90,60 @@
     <style name="login_cardview_text">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">@dimen/login_cardview_text_margin_start</item>
+        <item name="android:layout_marginStart">@dimen/medium_margin_padding</item>
         <item name="android:textColor">@color/md_theme_onPrimaryContainer</item>
+    </style>
+
+    <style name="login_input" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/medium_margin_padding</item>
+        <item name="android:textColorHint">@color/md_theme_onTertiaryContainer</item>
+        <item name="boxBackgroundColor">@color/md_theme_tertiaryContainer</item>
+        <item name="boxStrokeColor">@color/md_theme_onTertiaryContainer</item>
+        <item name="boxStrokeWidth">@dimen/general_stroke_width</item>
+    </style>
+
+    <style name="login_input_password" parent="login_input">
+        <item name="endIconMode">password_toggle</item>
+        <item name="endIconTint">@color/md_theme_tertiary</item>
+    </style>
+
+    <style name="login_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/big_margin_padding</item>
+        <item name="android:layout_marginBottom">@dimen/medium_margin_padding</item>
+        <item name="dividerInsetStart">@dimen/login_divider_size</item>
+        <item name="dividerInsetEnd">@dimen/login_divider_size</item>
+        <item name="dividerColor">@color/md_theme_tertiary</item>
+    </style>
+
+    <style name="login_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/md_theme_tertiaryContainer</item>
+        <item name="cardCornerRadius">@dimen/login_button_card_corner_radius</item>
+        <item name="cardElevation">@dimen/login_button_elevation</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="strokeColor">@color/md_theme_onTertiaryContainer</item>
+        <item name="strokeWidth">@dimen/general_stroke_width</item>
+    </style>
+
+    <style name="login_button_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">@dimen/login_button_text_padding</item>
+        <item name="android:textColor">@color/md_theme_onTertiaryContainer</item>
+        <item name="android:textSize">@dimen/subtitle_text_size</item>
     </style>
 
     <!-- User Fragment -->
     <style name="user_container">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">@dimen/general_margin_padding</item>
+        <item name="android:padding">@dimen/medium_margin_padding</item>
     </style>
 
     <style name="user_avatar">
@@ -122,7 +155,7 @@
     <style name="user_head_text">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_marginStart">@dimen/general_margin_padding</item>
+        <item name="android:layout_marginStart">@dimen/medium_margin_padding</item>
         <item name="android:gravity">center</item>
         <item name="android:orientation">vertical</item>
     </style>
@@ -132,7 +165,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/md_theme_onPrimary</item>
-        <item name="android:textSize">@dimen/user_head_text_title_text_size</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
         <item name="android:textStyle">italic</item>
         <item name="android:maxLines">1</item>
         <item name="android:autoSizeTextType">uniform</item>
@@ -141,7 +174,7 @@
     <style name="user_head_text_email">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">@dimen/user_head_text_email_margin</item>
+        <item name="android:layout_marginTop">@dimen/small_margin_padding</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/md_theme_onPrimary</item>
     </style>
@@ -149,7 +182,7 @@
     <style name="user_cardview">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">@dimen/general_margin_padding</item>
+        <item name="android:layout_marginBottom">@dimen/medium_margin_padding</item>
     </style>
 
     <style name="user_component_cardview">
@@ -170,9 +203,9 @@
     <style name="user_activities_section_item_title">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">@dimen/general_margin_padding</item>
+        <item name="android:padding">@dimen/medium_margin_padding</item>
         <item name="android:textColor">@color/md_theme_onPrimaryContainer</item>
-        <item name="android:textSize">@dimen/user_activities_section_item_title_size</item>
+        <item name="android:textSize">@dimen/subtitle_text_size</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -185,8 +218,8 @@
     <style name="user_activities_section_item_text">
         <item name="android:layout_width">@dimen/user_activities_section_item_text_width</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">@dimen/general_margin_padding</item>
-        <item name="android:paddingStart">@dimen/user_activities_section_item_text_padding_start
+        <item name="android:padding">@dimen/medium_margin_padding</item>
+        <item name="android:paddingStart">@dimen/big_margin_padding
         </item>
         <item name="android:textColor">@color/md_theme_onPrimaryContainer</item>
     </style>
@@ -194,7 +227,7 @@
     <style name="user_activities_section_item_number">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingTop">@dimen/general_margin_padding</item>
+        <item name="android:paddingTop">@dimen/medium_margin_padding</item>
         <item name="android:textColor">@color/md_theme_onPrimaryContainer</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -214,7 +247,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
-        <item name="android:padding">@dimen/general_margin_padding</item>
+        <item name="android:padding">@dimen/medium_margin_padding</item>
         <item name="android:textColor">@color/md_theme_onPrimaryContainer</item>
     </style>
 

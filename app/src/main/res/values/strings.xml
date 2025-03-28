@@ -3,6 +3,9 @@
     <string name="app_name">DiaryBook</string>
     <string name="activity_item_text_tool">Título actividad</string>
 
+    <!-- Firebase Auth -->
+    <string name="default_web_client_id">885806604798-ukhq58ofalm3psr5v4mgptsqe41h7bc9.apps.googleusercontent.com</string>
+
     <!-- Navigation menu -->
     <string name="home_title">Inicio</string>
     <string name="events_title">Eventos</string>
@@ -11,7 +14,10 @@
     <string name="login_title">Login</string>
 
     <!-- Login Fragment -->
-    <string name="login_cardview_text">Google</string>
+    <string name="login_title_text">Inicia sesión</string>
+    <string name="login_input_email">Correo electrónico</string>
+    <string name="login_input_password">Contraseña</string>
+    <string name="login_button">Crear cuenta</string>
 
     <!-- User Fragment -->
     <string name="user_head_text_title">Hola $name</string>

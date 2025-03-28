@@ -14,6 +14,9 @@ constraintlayout = "2.2.1"
 googleGmsGoogleServices = "4.4.2"
 firebaseFirestore = "25.1.3"
 
+# Firebase Auth
+firebaseAuth = "23.2.0"
+
 # Lifecycle ViewModel
 lifecycleVersion = "2.8.7"
 
@@ -31,12 +34,6 @@ roomVersion = "2.6.1"
 # Splash Screen
 splashScreenVersion = "1.0.1"
 
-# Firebase Auth
-firebaseAuth = "23.2.0"
-credentials = "1.5.0"
-credentialsPlayServicesAuth = "1.5.0"
-googleid = "1.1.1"
-
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -52,9 +49,6 @@ firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore
 
 # Firebase Auth
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
-androidx-credentials = { group = "androidx.credentials", name = "credentials", version.ref = "credentials" }
-androidx-credentials-play-services-auth = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "credentialsPlayServicesAuth" }
-googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
 
 # Lifecycle ViewModel
 lifecyle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion" }
