@@ -34,6 +34,12 @@ roomVersion = "2.6.1"
 # Splash Screen
 splashScreenVersion = "1.0.1"
 
+# Firebase Auth
+firebaseAuth = "23.2.0"
+credentials = "1.5.0"
+credentialsPlayServicesAuth = "1.5.0"
+googleid = "1.1.1"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
