@@ -34,6 +34,9 @@ roomVersion = "2.6.1"
 # Splash Screen
 splashScreenVersion = "1.0.1"
 
+#Coil
+coilVersion = "3.1.0"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -69,6 +72,10 @@ room-coroutines = { group = "androidx.room", name = "room-ktx", version.ref = "r
 
 # Splash Screen
 splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashScreenVersion" }
+
+# Coil
+coil = { group = "io.coil-kt.coil3", name = "coil", version.ref = "coilVersion" }
+coil_network = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coilVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

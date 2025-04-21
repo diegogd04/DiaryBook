@@ -74,6 +74,10 @@ dependencies {
     // SplashScreen
     implementation(libs.splashscreen)
 
+    // Coil
+    implementation(libs.coil)
+    implementation(libs.coil.network)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

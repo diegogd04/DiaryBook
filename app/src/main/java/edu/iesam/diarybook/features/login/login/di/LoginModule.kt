@@ -1,4 +1,4 @@
-package edu.iesam.diarybook.features.login.di
+package edu.iesam.diarybook.features.login.login.di
 
 import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module

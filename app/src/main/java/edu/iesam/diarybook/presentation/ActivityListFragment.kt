@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.auth.FirebaseAuth
 import edu.iesam.diarybook.databinding.FragmentActivityListBinding
 import edu.iesam.diarybook.domain.Activity
 import edu.iesam.diarybook.presentation.adapter.ActivityAdapter
@@ -18,6 +19,7 @@ class ActivityListFragment : Fragment() {
     private val binding get() = _binding!!
     private val activityAdapter = ActivityAdapter()
     private val viewModel: ActivityListViewModel by viewModel()
+    val currentUser = FirebaseAuth.getInstance().currentUser
 
     override fun onCreateView(
         inflater: LayoutInflater,

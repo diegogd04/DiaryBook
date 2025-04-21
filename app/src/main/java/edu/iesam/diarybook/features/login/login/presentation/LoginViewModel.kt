@@ -1,29 +1,29 @@
-package edu.iesam.diarybook.features.login.presentation
+package edu.iesam.diarybook.features.login.login.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import edu.iesam.diarybook.features.login.domain.GetUserUseCase
-import edu.iesam.diarybook.features.login.domain.User
+import edu.iesam.diarybook.features.login.login.domain.Account
+import edu.iesam.diarybook.features.login.login.domain.SignInAccountUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.koin.android.annotation.KoinViewModel
 
 @KoinViewModel
-class LoginViewModel(private val getUserUseCase: GetUserUseCase) : ViewModel() {
+class LoginViewModel(private val signInAccountUseCase: SignInAccountUseCase) : ViewModel() {
 
     private var _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> = _uiState
 
-    fun loadUser() {
+    fun signInAccount(account: Account) {
         viewModelScope.launch(Dispatchers.IO) {
-            val user = getUserUseCase()
-            _uiState.postValue(UiState(user))
+            signInAccountUseCase(account)
+            _uiState.postValue(UiState(signInAccount = true))
         }
     }
 
     data class UiState(
-        val user: User?
+        val signInAccount: Boolean = false,
     )
 }

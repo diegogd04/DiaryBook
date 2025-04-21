@@ -5,7 +5,7 @@ import com.google.firebase.FirebaseApp
 import edu.iesam.diarybook.app.di.LocalModule
 import edu.iesam.diarybook.app.di.RemoteModule
 import edu.iesam.diarybook.features.event.di.EventModule
-import edu.iesam.diarybook.features.login.di.LoginModule
+import edu.iesam.diarybook.features.login.login.di.LoginModule
 import edu.iesam.diarybook.features.task.di.TaskModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin

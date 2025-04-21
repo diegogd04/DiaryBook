@@ -27,6 +27,9 @@
     <dimen name="login_button_elevation">8dp</dimen>
     <dimen name="login_button_text_padding">15dp</dimen>
 
+    <!-- Create Fragment -->
+    <dimen name="create_title_margin_top">100dp</dimen>
+
     <!-- User Fragment -->
     <dimen name="user_avatar_size">100dp</dimen>
     <dimen name="user_avatar_card_corner_radius">60dp</dimen>

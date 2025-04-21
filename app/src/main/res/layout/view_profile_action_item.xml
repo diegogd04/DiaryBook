@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/user_component_cardview">
+    style="@style/user_component_cardview"
+    android:id="@+id/button">
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/button_text"
         style="@style/user_action_item_text"
-        android:text="@string/user_action_user_logout" />
+        android:text="@string/profile_action_user_logout" />
 
 </com.google.android.material.card.MaterialCardView>

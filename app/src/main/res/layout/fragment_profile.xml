@@ -19,8 +19,7 @@
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/photo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                style="@style/avatar_image"
                 tools:src="@tools:sample/avatars" />
 
         </androidx.cardview.widget.CardView>
@@ -37,12 +36,12 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="@string/user_head_text_title" />
+                tools:text="@string/profile_head_title_tool" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/email"
                 style="@style/user_head_text_email"
-                tools:text="@string/user_head_text_email" />
+                tools:text="@string/profile_head_email_tool" />
 
         </LinearLayout>
 
@@ -58,22 +57,22 @@
         <include
             android:id="@+id/pending_activities"
             style="@style/user_cardview"
-            layout="@layout/view_user_activities_section_item" />
+            layout="@layout/view_profile_activities_section_item" />
 
         <include
             android:id="@+id/completed_activities"
             style="@style/user_cardview"
-            layout="@layout/view_user_activities_section_item" />
+            layout="@layout/view_profile_activities_section_item" />
 
         <include
             android:id="@+id/user_logout"
             style="@style/user_cardview"
-            layout="@layout/view_user_action_item" />
+            layout="@layout/view_profile_action_item" />
 
         <include
             android:id="@+id/user_delete"
             style="@style/user_cardview"
-            layout="@layout/view_user_action_item" />
+            layout="@layout/view_profile_action_item" />
 
     </LinearLayout>
 

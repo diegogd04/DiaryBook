@@ -1,10 +1,12 @@
 <resources>
 
     <string name="app_name">DiaryBook</string>
-    <string name="activity_item_text_tool">Título actividad</string>
 
     <!-- Firebase Auth -->
     <string name="default_web_client_id">885806604798-ukhq58ofalm3psr5v4mgptsqe41h7bc9.apps.googleusercontent.com</string>
+
+    <!-- Activity Item -->
+    <string name="activity_item_text_tool">Título actividad</string>
 
     <!-- Navigation menu -->
     <string name="home_title">Inicio</string>
@@ -12,22 +14,30 @@
     <string name="today_title">Hoy</string>
     <string name="tasks_title">Tareas</string>
     <string name="login_title">Login</string>
+    <string name="profile_title">Perfil</string>
+
+    <!-- Login Fragment y Create Fragment -->
+    <string name="login_input_email">Correo electrónico</string>
+    <string name="login_input_password">Contraseña</string>
 
     <!-- Login Fragment -->
     <string name="login_title_text">Inicia sesión</string>
-    <string name="login_input_email">Correo electrónico</string>
-    <string name="login_input_password">Contraseña</string>
-    <string name="login_button">Crear cuenta</string>
+    <string name="login_sign_in_button">Iniciar sesión</string>
 
-    <!-- User Fragment -->
-    <string name="user_head_text_title">Hola $name</string>
-    <string name="user_head_text_email">email@gmail.com</string>
-    <string name="user_pending_activities_title">Actividades pendientes</string>
-    <string name="user_completed_activities_title">Actividades completadas</string>
-    <string name="user_events_text">Eventos:</string>
-    <string name="user_tasks_text">Tareas:</string>
-    <string name="user_activities_number">0</string>
-    <string name="user_action_user_logout">Cerrar sesión</string>
-    <string name="user_action_user_delete">Borrar cuenta</string>
+    <!-- Create Fragment -->
+    <string name="create_title">Crear cuenta</string>
+    <string name="create_input_name">Nombre</string>
+
+    <!-- Profile Fragment -->
+    <string name="profile_head_title_tool">Hola $name</string>
+    <string name="profile_head_title">Hola %1$s</string>
+    <string name="profile_head_email_tool">email@gmail.com</string>
+    <string name="profile_pending_activities_title">Actividades pendientes</string>
+    <string name="profile_completed_activities_title">Actividades completadas</string>
+    <string name="profile_events_text">Eventos:</string>
+    <string name="profile_tasks_text">Tareas:</string>
+    <string name="profile_activities_number">0</string>
+    <string name="profile_action_user_logout">Cerrar sesión</string>
+    <string name="profile_action_user_delete">Borrar cuenta</string>
 
 </resources>
