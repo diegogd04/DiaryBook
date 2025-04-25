@@ -18,12 +18,10 @@ class ProfileDataRepository(
 
     override suspend fun signOutAccount() {
         remote.signOutAccount()
-        local.clearLocalData()
     }
 
-    override suspend fun deleteAccount() {
-        remote.deleteAccount()
-        local.clearLocalData()
+    override suspend fun deleteAccount(email: String, password: String) {
+        remote.deleteAccount(email, password)
     }
 
     override suspend fun clearLocalData() {

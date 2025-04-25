@@ -9,7 +9,7 @@ import org.koin.core.annotation.Single
 @Single
 class TaskFirebaseRemoteDataSource(private val firestore: FirebaseFirestore) {
 
-    private val userId = FirebaseAuth.getInstance().currentUser?.uid
+    private val userId get() = FirebaseAuth.getInstance().currentUser?.uid
 
     suspend fun getTaskList(): List<Task> {
         val tasks = firestore.collection("tasks")

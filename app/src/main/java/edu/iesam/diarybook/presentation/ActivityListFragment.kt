@@ -19,7 +19,6 @@ class ActivityListFragment : Fragment() {
     private val binding get() = _binding!!
     private val activityAdapter = ActivityAdapter()
     private val viewModel: ActivityListViewModel by viewModel()
-    val currentUser = FirebaseAuth.getInstance().currentUser
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,8 +42,12 @@ class ActivityListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val currentUser = FirebaseAuth.getInstance().currentUser?.uid
+
         setUpObserver()
-        viewModel.loadActivities()
+        if (currentUser != null) {
+            viewModel.loadActivities()
+        }
     }
 
     private fun setUpObserver() {

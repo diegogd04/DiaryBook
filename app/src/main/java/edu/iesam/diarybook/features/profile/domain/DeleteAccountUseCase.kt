@@ -5,7 +5,7 @@ import org.koin.core.annotation.Single
 @Single
 class DeleteAccountUseCase(private val repository: ProfileRepository) {
 
-    suspend operator fun invoke() {
-        repository.deleteAccount()
+    suspend operator fun invoke(email: String, password: String) {
+        repository.deleteAccount(email, password)
     }
 }

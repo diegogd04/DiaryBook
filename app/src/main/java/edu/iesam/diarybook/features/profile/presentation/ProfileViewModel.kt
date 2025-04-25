@@ -39,9 +39,9 @@ class ProfileViewModel(
         }
     }
 
-    fun deleteAccount() {
+    fun deleteAccount(email: String, password: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            deleteAccountUseCase()
+            deleteAccountUseCase(email, password)
             _uiState.postValue(UiState(deleteAccount = true))
         }
     }

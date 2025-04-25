@@ -1,7 +1,7 @@
 [versions]
 agp = "8.6.1"
 kotlin = "2.0.0"
-coreKtx = "1.15.0"
+coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -29,12 +29,12 @@ kspVersion = "2.0.21-1.0.27"
 navVersion = "2.8.9"
 
 # Room
-roomVersion = "2.6.1"
+roomVersion = "2.7.1"
 
 # Splash Screen
 splashScreenVersion = "1.0.1"
 
-#Coil
+# Coil
 coilVersion = "3.1.0"
 
 [libraries]

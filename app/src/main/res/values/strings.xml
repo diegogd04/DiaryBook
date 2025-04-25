@@ -40,4 +40,10 @@
     <string name="profile_action_user_logout">Cerrar sesión</string>
     <string name="profile_action_user_delete">Borrar cuenta</string>
 
+    <!-- Delete Dialog -->
+    <string name="profile_delete_title">Confirmar eliminación de la cuenta</string>
+    <string name="profile_delete_description">Introducir email y contraseña:</string>
+    <string name="profile_delete_button_accept">Aceptar</string>
+    <string name="profile_delete_button_cancel">Cancelar</string>
+
 </resources>

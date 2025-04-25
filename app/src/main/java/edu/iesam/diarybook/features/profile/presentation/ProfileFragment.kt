@@ -72,7 +72,17 @@ class ProfileFragment : Fragment() {
     private fun deleteAccount() {
         binding.apply {
             userDelete.button.setOnClickListener {
-                viewModel.deleteAccount()
+                deleteBackground.root.visibility = View.VISIBLE
+                dialogConfirmDelete.root.visibility = View.VISIBLE
+            }
+            dialogConfirmDelete.accept.setOnClickListener {
+                val email = dialogConfirmDelete.emailInput.text.toString()
+                val password = dialogConfirmDelete.passwordInput.text.toString()
+                viewModel.deleteAccount(email, password)
+            }
+            dialogConfirmDelete.cancel.setOnClickListener {
+                deleteBackground.root.visibility = View.GONE
+                dialogConfirmDelete.root.visibility = View.GONE
             }
         }
     }

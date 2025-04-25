@@ -37,4 +37,8 @@
     <dimen name="user_activities_section_item_image_size">50dp</dimen>
     <dimen name="user_divider_small_size">50dp</dimen>
 
+    <!-- Delete Dialog -->
+    <dimen name="user_delete_dialog_icon_size">60dp</dimen>
+    <dimen name="user_delete_dialog_button_cancel_stroke_width">1dp</dimen>
+
 </resources>

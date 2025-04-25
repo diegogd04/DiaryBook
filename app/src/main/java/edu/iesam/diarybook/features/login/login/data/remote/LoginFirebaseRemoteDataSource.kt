@@ -7,7 +7,7 @@ import org.koin.core.annotation.Single
 @Single
 class LoginFirebaseRemoteDataSource {
 
-    private val auth = FirebaseAuth.getInstance()
+    private val auth get() = FirebaseAuth.getInstance()
 
     fun signInAccount(account: Account) {
         auth.signInWithEmailAndPassword(account.email, account.password)

@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.google.firebase.auth.FirebaseAuth
 import edu.iesam.diarybook.features.login.login.domain.Account
 import edu.iesam.diarybook.features.login.login.domain.SignInAccountUseCase
 import kotlinx.coroutines.Dispatchers
@@ -16,10 +17,22 @@ class LoginViewModel(private val signInAccountUseCase: SignInAccountUseCase) : V
     private var _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> = _uiState
 
+    private val auth = FirebaseAuth.getInstance()
+
+    init {
+        auth.addAuthStateListener { firebaseAuth ->
+            val currentUser = firebaseAuth.currentUser
+            _uiState.value = if (currentUser != null) {
+                UiState(signInAccount = true)
+            } else {
+                UiState(signInAccount = false)
+            }
+        }
+    }
+
     fun signInAccount(account: Account) {
         viewModelScope.launch(Dispatchers.IO) {
             signInAccountUseCase(account)
-            _uiState.postValue(UiState(signInAccount = true))
         }
     }
 
