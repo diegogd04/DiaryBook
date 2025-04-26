@@ -23,4 +23,22 @@
         android:label="@string/tasks_title"
         tools:layout="@layout/fragment_activity_list" />
 
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="edu.iesam.diarybook.features.login.login.presentation.LoginFragment"
+        android:label="@string/login_title"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/create_fragment"
+        android:name="edu.iesam.diarybook.features.login.create.presentation.CreateFragment"
+        android:label="@string/create_title"
+        tools:layout="@layout/fragment_create" />
+
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="edu.iesam.diarybook.features.profile.presentation.ProfileFragment"
+        android:label="@string/profile_title"
+        tools:layout="@layout/fragment_profile" />
+
 </navigation>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/user_component_cardview">
+
+    <LinearLayout style="@style/user_activities_section_item">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            style="@style/user_delete_dialog_icon"
+            android:src="@drawable/ic_delete" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            style="@style/user_activities_section_item_title"
+            android:text="@string/profile_delete_title" />
+
+        <com.google.android.material.divider.MaterialDivider style="@style/user_activities_section_item_divider" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/user_delete_description"
+            android:text="@string/profile_delete_description" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailInput"
+            style="@style/user_delete_input_email"
+            android:hint="@string/login_input_email" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordInput"
+            style="@style/user_delete_input_password"
+            android:hint="@string/login_input_password" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/user_delete_container_buttons">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/accept"
+                style="@style/user_delete_button"
+                android:text="@string/profile_delete_button_accept"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cancel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel"
+                style="@style/user_delete_button_cancel"
+                android:text="@string/profile_delete_button_cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

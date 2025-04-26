@@ -7,5 +7,6 @@ data class EventDbModel(
     val date: String = "",
     val duration: String = "",
     val old: Boolean = false,
-    val time: String = ""
+    val time: String = "",
+    val userId: String = ""
 )

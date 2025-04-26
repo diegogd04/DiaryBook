@@ -8,6 +8,7 @@ fun EventEntity.toModel(): Event {
         this.title,
         this.description,
         this.time,
+        this.userId,
         this.date,
         this.duration,
         this.old
@@ -20,6 +21,7 @@ fun Event.toEntity(ms: Long): EventEntity {
         this.title,
         this.description,
         this.time,
+        this.userId,
         this.date,
         this.duration,
         this.old,

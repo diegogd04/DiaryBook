@@ -7,7 +7,8 @@ class Event(
     title: String,
     description: String,
     time: String,
+    userId: String,
     val date: String,
     val duration: String,
     val old: Boolean,
-) : Activity(id, title, description, time)
+) : Activity(id, title, description, time, userId)
