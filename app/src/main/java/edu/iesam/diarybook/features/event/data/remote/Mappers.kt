@@ -10,6 +10,7 @@ fun EventDbModel.toModel(): Event {
         this.time,
         this.userId,
         this.date,
+        this.hour,
         this.duration,
         this.old
     )

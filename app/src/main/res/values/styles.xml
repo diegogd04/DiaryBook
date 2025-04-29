@@ -62,6 +62,9 @@
 
     <!-- Toolbar -->
     <style name="toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
         <item name="android:background">@color/md_theme_primary</item>
         <item name="titleTextColor">@color/md_theme_onPrimary</item>
         <item name="titleCentered">true</item>
@@ -106,7 +109,7 @@
 
     <style name="login_input" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/medium_margin_padding</item>
         <item name="android:textColorHint">@color/md_theme_onTertiaryContainer</item>
         <item name="boxBackgroundColor">@color/md_theme_tertiaryContainer</item>

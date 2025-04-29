@@ -9,6 +9,7 @@ class Event(
     time: String,
     userId: String,
     val date: String,
+    val hour: String,
     val duration: String,
-    val old: Boolean,
+    val old: Boolean
 ) : Activity(id, title, description, time, userId)
