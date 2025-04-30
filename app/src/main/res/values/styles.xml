@@ -29,6 +29,21 @@
         <item name="android:layout_margin">@dimen/medium_margin_padding</item>
     </style>
 
+    <style name="activity_list_button_add">
+        <item name="android:layout_width">@dimen/activity_list_button_add_size</item>
+        <item name="android:layout_height">@dimen/activity_list_button_add_size</item>
+        <item name="android:layout_margin">@dimen/medium_margin_padding</item>
+        <item name="cardBackgroundColor">@color/md_theme_primary</item>
+        <item name="cardCornerRadius">@dimen/general_button_corner_radius</item>
+        <item name="cardElevation">@dimen/general_button_elevation</item>
+    </style>
+
+    <style name="activity_list_button_add_icon">
+        <item name="android:layout_width">@dimen/login_cardview_image_size</item>
+        <item name="android:layout_height">@dimen/login_cardview_image_size</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
     <!-- Bottom App Bar -->
     <style name="bottom_app_bar_today_button">
         <item name="android:layout_width">@dimen/bottom_app_bar_today_button_size</item>
@@ -143,8 +158,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="cardBackgroundColor">@color/md_theme_tertiaryContainer</item>
-        <item name="cardCornerRadius">@dimen/login_button_card_corner_radius</item>
-        <item name="cardElevation">@dimen/login_button_elevation</item>
+        <item name="cardCornerRadius">@dimen/general_button_corner_radius</item>
+        <item name="cardElevation">@dimen/general_button_elevation</item>
         <item name="cardUseCompatPadding">true</item>
         <item name="strokeColor">@color/md_theme_onTertiaryContainer</item>
         <item name="strokeWidth">@dimen/general_stroke_width</item>

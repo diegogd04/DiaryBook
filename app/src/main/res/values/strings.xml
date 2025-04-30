@@ -15,6 +15,7 @@
     <string name="tasks_title">Tareas</string>
     <string name="login_title">Login</string>
     <string name="profile_title">Perfil</string>
+    <string name="create_activity_title">Crear actividad</string>
 
     <!-- Login Fragment y Create Fragment -->
     <string name="login_input_email">Correo electrónico</string>

@@ -9,7 +9,19 @@
         android:id="@+id/activity_list_fragment"
         android:name="edu.iesam.diarybook.presentation.ActivityListFragment"
         android:label="@string/home_title"
-        tools:layout="@layout/fragment_activity_list" />
+        tools:layout="@layout/fragment_activity_list">
+
+        <action
+            android:id="@+id/action_from_activity_list_fragment_to_create_activity_fragment"
+            app:destination="@+id/create_activity_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/create_activity_fragment"
+        android:name="edu.iesam.diarybook.presentation.activityForm.CreateActivityFragment"
+        android:label="@string/create_activity_title"
+        tools:layout="@layout/fragment_create_activity" />
 
     <fragment
         android:id="@+id/event_list_fragment"
