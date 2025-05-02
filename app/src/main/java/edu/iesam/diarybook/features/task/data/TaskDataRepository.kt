@@ -23,6 +23,10 @@ class TaskDataRepository(
         }
     }
 
+    override suspend fun createTask(task: Task) {
+        remote.createTask(task)
+    }
+
     override fun getTaskById(taskId: String): Task {
         TODO("Not yet implemented")
     }

@@ -29,6 +29,90 @@
         <item name="android:layout_margin">@dimen/medium_margin_padding</item>
     </style>
 
+    <style name="activity_list_button_add">
+        <item name="android:layout_width">@dimen/activity_list_button_add_size</item>
+        <item name="android:layout_height">@dimen/activity_list_button_add_size</item>
+        <item name="android:layout_margin">@dimen/medium_margin_padding</item>
+        <item name="cardBackgroundColor">@color/md_theme_primary</item>
+        <item name="cardCornerRadius">@dimen/general_button_corner_radius</item>
+        <item name="cardElevation">@dimen/general_button_elevation</item>
+    </style>
+
+    <style name="activity_list_button_add_icon">
+        <item name="android:layout_width">@dimen/login_cardview_image_size</item>
+        <item name="android:layout_height">@dimen/login_cardview_image_size</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Create Activity -->
+    <style name="create_activity_form">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/floating_height</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingHorizontal">@dimen/giant_big_margin_padding</item>
+        <item name="android:paddingTop">@dimen/big_margin_padding</item>
+    </style>
+
+    <style name="create_activity_button_toggle_group">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/big_margin_padding</item>
+        <item name="selectionRequired">true</item>
+        <item name="singleSelection">true</item>
+    </style>
+
+    <style name="create_activity_button_toggle_group_button" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:checkable">true</item>
+    </style>
+
+    <style name="create_activity_create_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">@dimen/giant_big_margin_padding</item>
+        <item name="android:layout_marginBottom">@dimen/big_margin_padding</item>
+        <item name="android:padding">@dimen/medium_margin_padding</item>
+    </style>
+
+    <!-- Create Form -->
+    <style name="create_form_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="create_form_text_input_layout" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
+    <style name="create_form_text_input_edit_text_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="create_form_text_input_edit_text_duration">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">time</item>
+    </style>
+
+    <style name="create_form_text_input_edit_text_date">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">date</item>
+    </style>
+
+    <style name="create_form_text_input_edit_text_hour">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">datetime</item>
+    </style>
+
     <!-- Bottom App Bar -->
     <style name="bottom_app_bar_today_button">
         <item name="android:layout_width">@dimen/bottom_app_bar_today_button_size</item>
@@ -62,6 +146,9 @@
 
     <!-- Toolbar -->
     <style name="toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
         <item name="android:background">@color/md_theme_primary</item>
         <item name="titleTextColor">@color/md_theme_onPrimary</item>
         <item name="titleCentered">true</item>
@@ -106,7 +193,7 @@
 
     <style name="login_input" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/medium_margin_padding</item>
         <item name="android:textColorHint">@color/md_theme_onTertiaryContainer</item>
         <item name="boxBackgroundColor">@color/md_theme_tertiaryContainer</item>
@@ -140,8 +227,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="cardBackgroundColor">@color/md_theme_tertiaryContainer</item>
-        <item name="cardCornerRadius">@dimen/login_button_card_corner_radius</item>
-        <item name="cardElevation">@dimen/login_button_elevation</item>
+        <item name="cardCornerRadius">@dimen/general_button_corner_radius</item>
+        <item name="cardElevation">@dimen/general_button_elevation</item>
         <item name="cardUseCompatPadding">true</item>
         <item name="strokeColor">@color/md_theme_onTertiaryContainer</item>
         <item name="strokeWidth">@dimen/general_stroke_width</item>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_toolbar" />
+
+    <LinearLayout
+        style="@style/create_activity_form"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggle_group_buttons"
+            style="@style/create_activity_button_toggle_group">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_event_add"
+                style="@style/create_activity_button_toggle_group_button"
+                android:text="@string/create_activity_button_add_event" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_task_add"
+                style="@style/create_activity_button_toggle_group_button"
+                android:text="@string/create_activity_button_add_task" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <include
+            android:id="@+id/create_form_event"
+            layout="@layout/view_create_form_event" />
+
+        <include
+            android:id="@+id/create_form_task"
+            layout="@layout/view_create_form_task"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/create_button"
+        style="@style/create_activity_create_button"
+        android:text="@string/create_activity_button_create"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

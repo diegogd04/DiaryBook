@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/create_form_task"
+    style="@style/create_form_container">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/create_form_text_input_layout"
+        android:hint="@string/create_form_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/task_title"
+            style="@style/create_form_text_input_edit_text_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/create_form_text_input_layout"
+        android:hint="@string/create_form_description">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/task_description"
+            style="@style/create_form_text_input_edit_text_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

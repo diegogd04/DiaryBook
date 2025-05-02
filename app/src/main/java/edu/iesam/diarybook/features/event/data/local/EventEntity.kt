@@ -10,9 +10,10 @@ data class EventEntity(
     @PrimaryKey @ColumnInfo val id: String,
     @ColumnInfo(name = "title") val title: String,
     @ColumnInfo(name = "description") val description: String,
-    @ColumnInfo(name = "time") val time: String,
+    @ColumnInfo(name = "time") val time: Long,
     @ColumnInfo(name = "user_id") val userId: String,
     @ColumnInfo(name = "date") val date: String,
+    @ColumnInfo(name = "hour") val hour: String,
     @ColumnInfo(name = "duration") val duration: String,
     @ColumnInfo(name = "old") val old: Boolean,
     @ColumnInfo(name = "created_at") val createdAt: Long

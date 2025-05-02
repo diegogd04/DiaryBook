@@ -22,4 +22,10 @@ class TaskFirebaseRemoteDataSource(private val firestore: FirebaseFirestore) {
 
         return tasks
     }
+
+    suspend fun createTask(task: Task) {
+        firestore.collection("tasks")
+            .add(task.toTaskDbModel())
+            .await()
+    }
 }

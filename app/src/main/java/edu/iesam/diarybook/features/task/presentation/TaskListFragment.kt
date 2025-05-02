@@ -32,13 +32,16 @@ class TaskListFragment : Fragment() {
     }
 
     private fun setUpView() {
-        binding.listItem.apply {
-            layoutManager = LinearLayoutManager(
-                requireContext(),
-                LinearLayoutManager.VERTICAL,
-                false
-            )
-            adapter = taskAdapter
+        binding.apply {
+            listItem.apply {
+                layoutManager = LinearLayoutManager(
+                    requireContext(),
+                    LinearLayoutManager.VERTICAL,
+                    false
+                )
+                adapter = taskAdapter
+            }
+            buttonActivityAdd.visibility = View.GONE
         }
     }
 

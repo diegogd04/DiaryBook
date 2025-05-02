@@ -10,7 +10,22 @@ fun EventDbModel.toModel(): Event {
         this.time,
         this.userId,
         this.date,
+        this.hour,
         this.duration,
         this.old
+    )
+}
+
+fun Event.toEventDbModel(): EventDbModel {
+    return EventDbModel(
+        this.id,
+        this.title,
+        this.description,
+        this.date,
+        this.hour,
+        this.duration,
+        this.old,
+        this.time,
+        this.userId
     )
 }
