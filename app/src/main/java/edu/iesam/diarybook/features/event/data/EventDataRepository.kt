@@ -24,6 +24,10 @@ class EventDataRepository(
 
     }
 
+    override suspend fun createEvent(event: Event) {
+        remote.createEvent(event)
+    }
+
     override fun getEventById(eventId: String): Event {
         TODO("Not yet implemented")
     }

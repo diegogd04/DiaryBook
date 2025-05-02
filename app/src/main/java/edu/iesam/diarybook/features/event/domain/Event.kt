@@ -6,10 +6,10 @@ class Event(
     id: String,
     title: String,
     description: String,
-    time: String,
+    time: Long,
     userId: String,
-    val date: String,
-    val hour: String,
-    val duration: String,
+    var date: String,
+    var hour: String,
+    var duration: String,
     val old: Boolean
 ) : Activity(id, title, description, time, userId)

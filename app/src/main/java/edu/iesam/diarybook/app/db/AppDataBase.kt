@@ -7,7 +7,7 @@ import edu.iesam.diarybook.features.event.data.local.EventEntity
 import edu.iesam.diarybook.features.task.data.local.TaskDao
 import edu.iesam.diarybook.features.task.data.local.TaskEntity
 
-@Database(entities = [EventEntity::class, TaskEntity::class], version = 4)
+@Database(entities = [EventEntity::class, TaskEntity::class], version = 6)
 abstract class AppDataBase : RoomDatabase() {
 
     abstract fun eventDao(): EventDao

@@ -2,9 +2,11 @@
 <resources>
 
     <!-- Common -->
+    <dimen name="floating_height">0dp</dimen>
     <dimen name="small_margin_padding">10dp</dimen>
     <dimen name="medium_margin_padding">20dp</dimen>
     <dimen name="big_margin_padding">40dp</dimen>
+    <dimen name="giant_big_margin_padding">60dp</dimen>
     <dimen name="general_stroke_width">3dp</dimen>
     <dimen name="general_button_corner_radius">20dp</dimen>
     <dimen name="general_button_elevation">8dp</dimen>

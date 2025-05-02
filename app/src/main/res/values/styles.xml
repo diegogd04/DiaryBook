@@ -44,6 +44,75 @@
         <item name="android:layout_gravity">center</item>
     </style>
 
+    <!-- Create Activity -->
+    <style name="create_activity_form">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/floating_height</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingHorizontal">@dimen/giant_big_margin_padding</item>
+        <item name="android:paddingTop">@dimen/big_margin_padding</item>
+    </style>
+
+    <style name="create_activity_button_toggle_group">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/big_margin_padding</item>
+        <item name="selectionRequired">true</item>
+        <item name="singleSelection">true</item>
+    </style>
+
+    <style name="create_activity_button_toggle_group_button" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:checkable">true</item>
+    </style>
+
+    <style name="create_activity_create_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">@dimen/giant_big_margin_padding</item>
+        <item name="android:layout_marginBottom">@dimen/big_margin_padding</item>
+        <item name="android:padding">@dimen/medium_margin_padding</item>
+    </style>
+
+    <!-- Create Form -->
+    <style name="create_form_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="create_form_text_input_layout" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
+    <style name="create_form_text_input_edit_text_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="create_form_text_input_edit_text_duration">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">time</item>
+    </style>
+
+    <style name="create_form_text_input_edit_text_date">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">date</item>
+    </style>
+
+    <style name="create_form_text_input_edit_text_hour">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">datetime</item>
+    </style>
+
     <!-- Bottom App Bar -->
     <style name="bottom_app_bar_today_button">
         <item name="android:layout_width">@dimen/bottom_app_bar_today_button_size</item>

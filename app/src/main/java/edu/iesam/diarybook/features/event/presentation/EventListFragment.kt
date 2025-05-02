@@ -32,11 +32,14 @@ class EventListFragment : Fragment() {
     }
 
     private fun setUpView() {
-        binding.listItem.apply {
-            layoutManager = LinearLayoutManager(
-                requireContext(), LinearLayoutManager.VERTICAL, false
-            )
-            adapter = eventAdapter
+        binding.apply {
+            listItem.apply {
+                layoutManager = LinearLayoutManager(
+                    requireContext(), LinearLayoutManager.VERTICAL, false
+                )
+                adapter = eventAdapter
+            }
+            buttonActivityAdd.visibility = View.GONE
         }
     }
 

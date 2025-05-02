@@ -22,4 +22,10 @@ class EventFirebaseRemoteDataSource(private val firestore: FirebaseFirestore) {
 
         return events
     }
+
+    suspend fun createEvent(event: Event) {
+        firestore.collection("events")
+            .add(event.toEventDbModel())
+            .await()
+    }
 }

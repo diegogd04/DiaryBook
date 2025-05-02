@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/create_form_event"
+    style="@style/create_form_container">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/create_form_text_input_layout"
+        android:hint="@string/create_form_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/event_title"
+            style="@style/create_form_text_input_edit_text_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/create_form_text_input_layout"
+        android:hint="@string/create_form_description">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/event_description"
+            style="@style/create_form_text_input_edit_text_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/create_form_text_input_layout"
+        android:hint="@string/create_form_duration">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/event_duration"
+            style="@style/create_form_text_input_edit_text_duration" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/create_form_text_input_layout"
+        android:hint="@string/create_form_date"
+        app:endIconDrawable="@drawable/ic_calendar"
+        app:endIconMode="custom">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/event_date"
+            style="@style/create_form_text_input_edit_text_date" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/create_form_text_input_layout"
+        android:hint="@string/create_form_hour"
+        app:endIconDrawable="@drawable/ic_hour"
+        app:endIconMode="custom">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/event_hour"
+            style="@style/create_form_text_input_edit_text_hour" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
