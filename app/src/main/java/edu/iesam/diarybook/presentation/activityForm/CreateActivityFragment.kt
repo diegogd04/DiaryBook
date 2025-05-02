@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
@@ -119,6 +120,7 @@ class CreateActivityFragment : Fragment() {
 
     private fun createSetUpViewEventForm() {
         binding.apply {
+            cleanForm(createFormTask.createFormTask)
             createFormEvent.createFormEvent.visibility = View.VISIBLE
             createFormTask.createFormTask.visibility = View.GONE
             createButton.setOnClickListener {
@@ -146,6 +148,7 @@ class CreateActivityFragment : Fragment() {
 
     private fun createSetUpViewTaskForm() {
         binding.apply {
+            cleanForm(createFormEvent.createFormEvent)
             createFormEvent.createFormEvent.visibility = View.GONE
             createFormTask.createFormTask.visibility = View.VISIBLE
             createButton.setOnClickListener {
@@ -164,6 +167,15 @@ class CreateActivityFragment : Fragment() {
                 description = taskDescription.text.toString()
                 userId = currentUserId.toString()
                 this.time = time
+            }
+        }
+    }
+
+    private fun cleanForm(viewGroup: ViewGroup) {
+        for (i in 0 until viewGroup.childCount) {
+            when (val view = viewGroup.getChildAt(i)) {
+                is EditText -> view.setText("")
+                is ViewGroup -> cleanForm(view)
             }
         }
     }
