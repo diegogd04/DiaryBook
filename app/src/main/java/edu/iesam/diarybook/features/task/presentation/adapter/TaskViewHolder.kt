@@ -17,9 +17,10 @@ class TaskViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
 
         binding.apply {
             this.color.visibility = View.GONE
-            text.apply {
+            title.apply {
                 text = item.title
             }.setTextColor(color)
+            description.text = item.description
             cardViewItem.strokeColor = color
         }
     }
