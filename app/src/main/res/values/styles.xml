@@ -50,7 +50,7 @@
         <item name="android:layout_height">@dimen/floating_height</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:paddingHorizontal">@dimen/giant_big_margin_padding</item>
+        <item name="android:paddingHorizontal">@dimen/giant_margin_padding</item>
         <item name="android:paddingTop">@dimen/big_margin_padding</item>
     </style>
 
@@ -71,7 +71,7 @@
     <style name="create_activity_create_button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginHorizontal">@dimen/giant_big_margin_padding</item>
+        <item name="android:layout_marginHorizontal">@dimen/giant_margin_padding</item>
         <item name="android:layout_marginBottom">@dimen/big_margin_padding</item>
         <item name="android:padding">@dimen/medium_margin_padding</item>
     </style>
@@ -113,6 +113,62 @@
         <item name="android:inputType">datetime</item>
     </style>
 
+    <!-- Activity Detail -->
+    <style name="activity_detail_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="activity_detail_top_info">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/tiny_margin_padding</item>
+    </style>
+
+    <style name="activity_detail_top_info_element">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/tiny_margin_padding</item>
+        <item name="cardBackgroundColor">@color/md_theme_primaryContainer</item>
+    </style>
+
+    <style name="activity_detail_top_info_element_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/small_margin_padding</item>
+    </style>
+
+    <style name="activity_detail_top_info_element_icon">
+        <item name="android:layout_width">@dimen/general_icon_size</item>
+        <item name="android:layout_height">@dimen/general_icon_size</item>
+        <item name="android:tint">@color/md_theme_onPrimaryContainer</item>
+    </style>
+
+    <style name="activity_detail_top_info_element_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/small_margin_padding</item>
+        <item name="android:textColor">@color/md_theme_onPrimaryContainer</item>
+    </style>
+
+    <style name="activity_detail_info_element">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/giant_margin_padding</item>
+        <item name="cardBackgroundColor">@color/md_theme_primaryContainer</item>
+    </style>
+
+    <style name="activity_detail_info_element_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/medium_margin_padding</item>
+        <item name="android:textColor">@color/md_theme_onPrimaryContainer</item>
+    </style>
+
     <!-- Bottom App Bar -->
     <style name="bottom_app_bar_today_button">
         <item name="android:layout_width">@dimen/bottom_app_bar_today_button_size</item>
@@ -129,7 +185,7 @@
     <style name="bottom_app_bar">
         <item name="android:background">@color/md_theme_primary</item>
         <item name="itemIconTint">@color/md_theme_onPrimary</item>
-        <item name="itemIconSize">@dimen/bottom_app_bar_icon_size</item>
+        <item name="itemIconSize">@dimen/general_icon_size</item>
         <item name="itemRippleColor">@color/md_theme_tertiary</item>
         <item name="itemActiveIndicatorStyle">@style/bottom_app_bar_indicator</item>
     </style>
