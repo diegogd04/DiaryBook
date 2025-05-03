@@ -16,12 +16,20 @@
             android:layout_height="match_parent"
             android:orientation="vertical" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/text"
-            style="@style/activity_item_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/activity_item_text_tool" />
+        <LinearLayout style="@style/activity_item">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                style="@style/activity_item_title"
+                android:text="@string/activity_item_title_tool" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_item_description_tool" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
