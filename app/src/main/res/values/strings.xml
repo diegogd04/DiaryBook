@@ -10,7 +10,8 @@
     <string name="hour_format">%02d:%02d</string>
 
     <!-- Activity Item -->
-    <string name="activity_item_text_tool">Título actividad</string>
+    <string name="activity_item_title_tool">Título actividad</string>
+    <string name="activity_item_description_tool">Descripción actividad</string>
 
     <!-- Create Activity -->
     <string name="create_activity_button_add_event">Evento</string>
