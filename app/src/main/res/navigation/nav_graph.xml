@@ -13,7 +13,20 @@
 
         <action
             android:id="@+id/action_from_activity_list_fragment_to_create_activity_fragment"
-            app:destination="@+id/create_activity_fragment" />
+            app:destination="@id/create_activity_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_event_fragment"
+        android:name="edu.iesam.diarybook.features.event.presentation.eventDetail.EventDetailFragment"
+        android:label="@string/detail_activity_title"
+        tools:layout="@layout/fragment_event_detail">
+
+        <argument
+            android:name="event"
+            app:argType="edu.iesam.diarybook.features.event.domain.Event"
+            app:nullable="false" />
 
     </fragment>
 
@@ -27,13 +40,21 @@
         android:id="@+id/event_list_fragment"
         android:name="edu.iesam.diarybook.features.event.presentation.EventListFragment"
         android:label="@string/events_title"
-        tools:layout="@layout/fragment_activity_list" />
+        tools:layout="@layout/fragment_activity_list">
+
+        <action
+            android:id="@+id/action_from_event_list_fragment_to_detail_event_fragment"
+            app:destination="@id/detail_event_fragment" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/task_list_fragment"
         android:name="edu.iesam.diarybook.features.task.presentation.TaskListFragment"
         android:label="@string/tasks_title"
-        tools:layout="@layout/fragment_activity_list" />
+        tools:layout="@layout/fragment_activity_list">
+
+    </fragment>
 
     <fragment
         android:id="@+id/login_fragment"

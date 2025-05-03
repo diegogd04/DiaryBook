@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.ListAdapter
 import edu.iesam.diarybook.R
 import edu.iesam.diarybook.domain.Activity
 
-class ActivityAdapter : ListAdapter<Activity, ActivityViewHolder>(ActivityDiffUtil()) {
+class ActivityAdapter() :
+    ListAdapter<Activity, ActivityViewHolder>(ActivityDiffUtil()) {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ActivityViewHolder {
         val view = LayoutInflater.from(viewGroup.context)

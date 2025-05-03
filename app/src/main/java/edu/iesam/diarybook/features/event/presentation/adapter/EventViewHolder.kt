@@ -7,7 +7,10 @@ import edu.iesam.diarybook.R
 import edu.iesam.diarybook.databinding.ViewActivityItemBinding
 import edu.iesam.diarybook.features.event.domain.Event
 
-class EventViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+class EventViewHolder(
+    private val view: View,
+    private val onItemClickListener: (Event) -> Unit
+) : RecyclerView.ViewHolder(view) {
 
     private lateinit var binding: ViewActivityItemBinding
 
@@ -18,10 +21,16 @@ class EventViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
 
         binding.apply {
             this.color.visibility = View.GONE
-            text.apply {
+            title.apply {
                 text = item.title
             }.setTextColor(color)
-            cardViewItem.strokeColor = color
+            description.text = item.description
+            cardViewItem.apply {
+                strokeColor = color
+                setOnClickListener {
+                    onItemClickListener(item)
+                }
+            }
         }
     }
 }

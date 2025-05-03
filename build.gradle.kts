@@ -3,6 +3,12 @@ plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
 
+    // Firebase
     alias(libs.plugins.google.gms.google.services) apply false
+
+    // Ksp
     alias(libs.plugins.ksp) apply false
+
+    // Navigation
+    alias(libs.plugins.safeargs) apply false
 }

@@ -6,12 +6,13 @@ import androidx.recyclerview.widget.ListAdapter
 import edu.iesam.diarybook.R
 import edu.iesam.diarybook.features.event.domain.Event
 
-class EventAdapter : ListAdapter<Event, EventViewHolder>(EventDiffUtil()) {
+class EventAdapter(private val onItemClickListener: (Event) -> Unit) :
+    ListAdapter<Event, EventViewHolder>(EventDiffUtil()) {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): EventViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
             .inflate(R.layout.view_activity_item, viewGroup, false)
-        return EventViewHolder(view)
+        return EventViewHolder(view, onItemClickListener)
     }
 
     override fun getItemCount(): Int {
