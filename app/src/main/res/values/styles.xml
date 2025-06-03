@@ -139,20 +139,28 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:gravity">center</item>
-        <item name="android:padding">@dimen/small_margin_padding</item>
+        <item name="android:padding">@dimen/medium_margin_padding</item>
+    </style>
+
+    <style name="activity_detail_description_container" parent="activity_detail_top_info_element_container">
+        <item name="android:orientation">vertical</item>
     </style>
 
     <style name="activity_detail_top_info_element_icon">
         <item name="android:layout_width">@dimen/general_icon_size</item>
         <item name="android:layout_height">@dimen/general_icon_size</item>
+        <item name="android:layout_marginEnd">@dimen/medium_margin_padding</item>
         <item name="android:tint">@color/md_theme_onPrimaryContainer</item>
     </style>
 
     <style name="activity_detail_top_info_element_text">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">@dimen/small_margin_padding</item>
         <item name="android:textColor">@color/md_theme_onPrimaryContainer</item>
+    </style>
+
+    <style name="activity_detail_description_hint_text" parent="activity_detail_top_info_element_text">
+        <item name="android:layout_marginStart">@dimen/small_margin_padding</item>
     </style>
 
     <style name="activity_detail_info_element">
@@ -165,8 +173,12 @@
     <style name="activity_detail_info_element_text">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">@dimen/medium_margin_padding</item>
         <item name="android:textColor">@color/md_theme_onPrimaryContainer</item>
+    </style>
+
+    <style name="activity_detail_info_element_title_text" parent="activity_detail_info_element_text">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">@dimen/medium_margin_padding</item>
     </style>
 
     <!-- Bottom App Bar -->

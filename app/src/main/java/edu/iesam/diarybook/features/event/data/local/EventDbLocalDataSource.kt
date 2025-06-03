@@ -28,4 +28,8 @@ class EventDbLocalDataSource(private val eventDao: EventDao) {
 
         eventDao.saveAll(*events.map { it.toEntity(ms) }.toTypedArray())
     }
+
+    fun getEventById(eventId: String): Event {
+        return eventDao.getById(eventId).toModel()
+    }
 }

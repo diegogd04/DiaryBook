@@ -24,8 +24,8 @@
         tools:layout="@layout/fragment_event_detail">
 
         <argument
-            android:name="event"
-            app:argType="edu.iesam.diarybook.features.event.domain.Event"
+            android:name="event_id"
+            app:argType="string"
             app:nullable="false" />
 
     </fragment>

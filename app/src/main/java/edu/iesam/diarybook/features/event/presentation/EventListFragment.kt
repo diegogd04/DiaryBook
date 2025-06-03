@@ -21,7 +21,8 @@ class EventListFragment : Fragment() {
     private val binding get() = _binding!!
     private val viewModel: EventListViewModel by viewModel()
     private val eventAdapter = EventAdapter{ event ->
-        val action = EventListFragmentDirections.actionFromEventListFragmentToDetailEventFragment(event)
+        val action =
+            EventListFragmentDirections.actionFromEventListFragmentToDetailEventFragment(event.id)
         findNavController().navigate(action)
     }
 

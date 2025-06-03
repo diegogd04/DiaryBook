@@ -15,18 +15,18 @@ googleGmsGoogleServices = "4.4.2"
 firebaseFirestore = "25.1.4"
 
 # Firebase Auth
-firebaseAuth = "23.2.0"
+firebaseAuth = "23.2.1"
 
 # Lifecycle ViewModel
-lifecycleVersion = "2.8.7"
+lifecycleVersion = "2.9.0"
 
 # Koin
-koinAndroidVersion = "4.0.2"
+koinAndroidVersion = "4.0.3"
 koinAnnotationsVersion = "2.0.0"
-kspVersion = "2.0.21-1.0.27"
+kspVersion = "2.0.21-1.0.28"
 
 # Navigation
-navVersion = "2.8.9"
+navVersion = "2.9.0"
 
 # Room
 roomVersion = "2.7.1"
@@ -35,7 +35,7 @@ roomVersion = "2.7.1"
 splashScreenVersion = "1.0.1"
 
 # Coil
-coilVersion = "3.1.0"
+coilVersion = "3.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
