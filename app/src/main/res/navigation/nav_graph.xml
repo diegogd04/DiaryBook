@@ -20,11 +20,24 @@
     <fragment
         android:id="@+id/detail_event_fragment"
         android:name="edu.iesam.diarybook.features.event.presentation.eventDetail.EventDetailFragment"
-        android:label="@string/detail_activity_title"
+        android:label="@string/detail_event_title"
         tools:layout="@layout/fragment_event_detail">
 
         <argument
             android:name="event_id"
+            app:argType="string"
+            app:nullable="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_task_fragment"
+        android:name="edu.iesam.diarybook.features.task.presentation.taskDetail.TaskDetailFragment"
+        android:label="@string/detail_task_title"
+        tools:layout="@layout/fragment_task_detail">
+
+        <argument
+            android:name="task_id"
             app:argType="string"
             app:nullable="false" />
 
@@ -53,6 +66,10 @@
         android:name="edu.iesam.diarybook.features.task.presentation.TaskListFragment"
         android:label="@string/tasks_title"
         tools:layout="@layout/fragment_activity_list">
+
+        <action
+            android:id="@+id/action_from_task_list_fragment_to_detail_task_fragment"
+            app:destination="@id/detail_task_fragment" />
 
     </fragment>
 

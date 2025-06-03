@@ -6,12 +6,13 @@ import androidx.recyclerview.widget.ListAdapter
 import edu.iesam.diarybook.R
 import edu.iesam.diarybook.features.task.domain.Task
 
-class TaskAdapter : ListAdapter<Task, TaskViewHolder>(TaskDiffUtil()) {
+class TaskAdapter(private val onItemClickListener: (Task) -> Unit) :
+    ListAdapter<Task, TaskViewHolder>(TaskDiffUtil()) {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): TaskViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
             .inflate(R.layout.view_activity_item, viewGroup, false)
-        return TaskViewHolder(view)
+        return TaskViewHolder(view, onItemClickListener)
     }
 
     override fun getItemCount(): Int {

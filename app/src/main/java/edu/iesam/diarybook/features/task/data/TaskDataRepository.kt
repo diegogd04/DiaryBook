@@ -28,7 +28,7 @@ class TaskDataRepository(
     }
 
     override fun getTaskById(taskId: String): Task {
-        TODO("Not yet implemented")
+        return local.getTaskById(taskId)
     }
 
     override fun saveTaskList(tasks: List<Task>) {

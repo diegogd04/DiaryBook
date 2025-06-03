@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    style="@style/activity_detail_container">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_toolbar" />
+
+    <com.google.android.material.card.MaterialCardView style="@style/activity_detail_info_element">
+
+        <LinearLayout style="@style/activity_detail_description_container">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/activity_detail_info_element_title_text"
+                android:text="@string/create_form_description" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/description"
+                style="@style/activity_detail_info_element_text"
+                tool:text="@string/create_form_description" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
