@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import edu.iesam.diarybook.R
 import edu.iesam.diarybook.databinding.FragmentEventDetailBinding
@@ -59,6 +60,10 @@ class EventDetailFragment : Fragment() {
 
     private fun toolbarEdit(event: Event) {
         binding.toolbar.topAppBar.apply {
+            setNavigationIcon(R.drawable.ic_back_arrow)
+            setNavigationOnClickListener {
+                findNavController().navigateUp()
+            }
             setBackgroundColor(
                 ContextCompat.getColor(
                     requireContext(),

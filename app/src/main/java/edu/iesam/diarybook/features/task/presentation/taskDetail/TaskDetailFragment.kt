@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import edu.iesam.diarybook.R
 import edu.iesam.diarybook.databinding.FragmentTaskDetailBinding
@@ -56,16 +57,20 @@ class TaskDetailFragment : Fragment() {
 
     private fun toolbarEdit(task: Task) {
         binding.toolbar.topAppBar.apply {
+            setNavigationIcon(R.drawable.ic_back_arrow)
+            setNavigationOnClickListener {
+                findNavController().navigateUp()
+            }
             setBackgroundColor(
                 ContextCompat.getColor(
                     requireContext(),
-                    R.color.md_theme_secondaryFixedDim_highContrast
+                    R.color.md_theme_tertiary
                 )
             )
             setTitleTextColor(
                 ContextCompat.getColor(
                     requireContext(),
-                    R.color.md_theme_onSecondaryFixedVariant_highContrast
+                    R.color.md_theme_onTertiary
                 )
             )
             title = task.title
