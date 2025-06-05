@@ -27,8 +27,8 @@ class TaskDataRepository(
         remote.createTask(task)
     }
 
-    override fun getTaskById(taskId: String): Task {
-        TODO("Not yet implemented")
+    override fun getTaskById(taskId: Int): Task {
+        return local.getTaskById(taskId)
     }
 
     override fun saveTaskList(tasks: List<Task>) {

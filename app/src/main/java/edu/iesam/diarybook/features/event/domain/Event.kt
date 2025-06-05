@@ -3,7 +3,7 @@ package edu.iesam.diarybook.features.event.domain
 import edu.iesam.diarybook.domain.Activity
 
 class Event(
-    id: String,
+    id: Int,
     title: String,
     description: String,
     time: Long,

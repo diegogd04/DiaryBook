@@ -20,6 +20,18 @@ class ActivityListFragment : Fragment() {
     private var _binding: FragmentActivityListBinding? = null
     private val binding get() = _binding!!
     private val activityAdapter = ActivityAdapter()
+
+    /*private val activityAdapter = ActivityAdapter{ activity ->
+        val action = if (activity is Event){
+            ActivityListFragmentDirections.actionFromActivityListFragmentToDetailActivityFragment(activity, null)
+        }else if (activity is Task){
+            ActivityListFragmentDirections.actionFromActivityListFragmentToDetailActivityFragment(null, activity)
+        } else {
+            return@ActivityAdapter
+        }
+
+        findNavController().navigate(action)
+    }*/
     private val viewModel: ActivityListViewModel by viewModel()
 
     override fun onCreateView(

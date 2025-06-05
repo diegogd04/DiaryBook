@@ -33,6 +33,8 @@
     <string name="login_title">Login</string>
     <string name="profile_title">Perfil</string>
     <string name="create_activity_title">Crear actividad</string>
+    <string name="detail_event_title">Detalle del evento</string>
+    <string name="detail_task_title">Detalle de la tarea</string>
 
     <!-- Login Fragment y Create Fragment -->
     <string name="login_input_email">Correo electrónico</string>
@@ -63,5 +65,11 @@
     <string name="profile_delete_description">Introducir email y contraseña:</string>
     <string name="profile_delete_button_accept">Aceptar</string>
     <string name="profile_delete_button_cancel">Cancelar</string>
+
+    <!-- Event Detail Fragment -->
+    <string name="event_date_tool">00/00/0000</string>
+    <string name="event_hour_tool">00:00</string>
+    <string name="event_duration_tool">000</string>
+    <string name="event_duration_hint">min</string>
 
 </resources>

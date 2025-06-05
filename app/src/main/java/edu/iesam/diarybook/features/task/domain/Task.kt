@@ -3,7 +3,7 @@ package edu.iesam.diarybook.features.task.domain
 import edu.iesam.diarybook.domain.Activity
 
 class Task(
-    id: String,
+    id: Int,
     title: String,
     description: String,
     time: Long,

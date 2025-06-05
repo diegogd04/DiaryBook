@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.iesam.diarybook.R
 import edu.iesam.diarybook.databinding.FragmentActivityListBinding
@@ -18,7 +19,11 @@ class TaskListFragment : Fragment() {
 
     private var _binding: FragmentActivityListBinding? = null
     private val binding get() = _binding!!
-    private val taskAdapter = TaskAdapter()
+    private val taskAdapter = TaskAdapter { task ->
+        val action =
+            TaskListFragmentDirections.actionFromTaskListFragmentToDetailTaskFragment(task.id)
+        findNavController().navigate(action)
+    }
     private val viewModel: TaskListViewModel by viewModel()
 
     override fun onCreateView(

@@ -28,4 +28,8 @@ class TaskDbLocalDataSource(private val taskDao: TaskDao) {
 
         taskDao.saveAll(*tasks.map { it.toEntity(ms) }.toTypedArray())
     }
+
+    fun getTaskById(taskId: Int): Task {
+        return taskDao.getById(taskId).toModel()
+    }
 }

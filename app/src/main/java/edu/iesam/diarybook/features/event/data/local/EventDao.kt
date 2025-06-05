@@ -13,7 +13,7 @@ interface EventDao {
     fun getAll(): List<EventEntity>
 
     @Query("SELECT * FROM evententity WHERE id IN (:eventId)")
-    fun getById(eventId: String): EventEntity
+    fun getById(eventId: Int): EventEntity
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun saveAll(vararg events: EventEntity)
