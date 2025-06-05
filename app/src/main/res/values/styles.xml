@@ -232,6 +232,14 @@
         <item name="titleCentered">true</item>
     </style>
 
+    <style name="toolbar_button">
+        <item name="android:layout_width">@dimen/general_icon_size</item>
+        <item name="android:layout_height">@dimen/general_icon_size</item>
+        <item name="android:layout_marginEnd">@dimen/medium_margin_padding</item>
+        <item name="android:tint">@color/md_theme_onTertiary</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
     <!-- Login Fragment y User Fragment -->
     <style name="login_background">
         <item name="android:layout_width">match_parent</item>
