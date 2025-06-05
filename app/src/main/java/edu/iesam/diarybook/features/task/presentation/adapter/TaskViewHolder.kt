@@ -20,7 +20,7 @@ class TaskViewHolder(
 
         binding.apply {
             this.color.visibility = View.GONE
-            text.apply {
+            title.apply {
                 text = item.title
             }.setTextColor(color)
             cardViewItem.apply {

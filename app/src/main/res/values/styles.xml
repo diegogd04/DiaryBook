@@ -14,9 +14,19 @@
         <item name="android:layout_width">@dimen/activity_item_color_width</item>
     </style>
 
-    <style name="activity_item_text">
+    <style name="activity_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
         <item name="android:padding">@dimen/medium_margin_padding</item>
         <item name="android:background">@color/md_theme_secondaryContainer</item>
+    </style>
+
+    <style name="activity_item_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">@dimen/small_margin_padding</item>
     </style>
 
     <style name="activity_item_cardview">

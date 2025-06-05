@@ -31,9 +31,10 @@ class ActivityViewHolder(
         }
 
         binding.apply {
-            text.apply {
+            title.apply {
                 text = item.title
             }.setTextColor(color)
+            description.text = item.description
             cardViewItem.strokeColor = color
             this.color.setBackgroundColor(color)
         }
