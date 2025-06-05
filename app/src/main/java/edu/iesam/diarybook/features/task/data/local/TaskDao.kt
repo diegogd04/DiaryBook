@@ -13,7 +13,7 @@ interface TaskDao {
     fun getAll(): List<TaskEntity>
 
     @Query("SELECT * FROM taskentity WHERE id IN (:taskId)")
-    fun getById(taskId: String): TaskEntity
+    fun getById(taskId: Int): TaskEntity
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun saveAll(vararg tasks: TaskEntity)

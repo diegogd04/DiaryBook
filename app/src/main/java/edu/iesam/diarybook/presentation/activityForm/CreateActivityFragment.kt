@@ -16,6 +16,7 @@ import edu.iesam.diarybook.features.event.domain.Event
 import edu.iesam.diarybook.features.task.domain.Task
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.Calendar
+import kotlin.random.Random
 
 class CreateActivityFragment : Fragment() {
 
@@ -23,8 +24,8 @@ class CreateActivityFragment : Fragment() {
     private val binding get() = _binding!!
     private val viewModel: CreateActivityViewModel by viewModel()
     private val currentUserId get() = FirebaseAuth.getInstance().currentUser?.uid
-    private val event = Event("", "", "", 0, "", "", "", "", false)
-    private val task = Task("", "", "", 0, "", false)
+    private val event = Event(0, "", "", 0, "", "", "", "", false)
+    private val task = Task(0, "", "", 0, "", false)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -135,6 +136,7 @@ class CreateActivityFragment : Fragment() {
     private fun bindDataEvent(time: Long) {
         binding.createFormEvent.apply {
             event.apply {
+                id = Random.nextInt(1, 100000)
                 title = eventTitle.text.toString()
                 description = eventDescription.text.toString()
                 duration = eventDuration.text.toString()
@@ -163,6 +165,7 @@ class CreateActivityFragment : Fragment() {
     private fun bindDataTask(time: Long) {
         binding.createFormTask.apply {
             task.apply {
+                id = Random.nextInt(1, 100000)
                 title = taskTitle.text.toString()
                 description = taskDescription.text.toString()
                 userId = currentUserId.toString()

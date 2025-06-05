@@ -16,7 +16,7 @@ class TaskDetailViewModel(private val getTaskByIdUseCase: GetTaskByIdUseCase) : 
     private val _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> = _uiState
 
-    fun loadTask(taskId: String) {
+    fun loadTask(taskId: Int) {
         viewModelScope.launch(Dispatchers.IO) {
             val task = getTaskByIdUseCase(taskId)
             _uiState.postValue(UiState(task))

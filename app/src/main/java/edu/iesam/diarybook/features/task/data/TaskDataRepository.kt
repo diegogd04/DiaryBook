@@ -27,7 +27,7 @@ class TaskDataRepository(
         remote.createTask(task)
     }
 
-    override fun getTaskById(taskId: String): Task {
+    override fun getTaskById(taskId: Int): Task {
         return local.getTaskById(taskId)
     }
 

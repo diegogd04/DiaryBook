@@ -28,7 +28,7 @@ class EventDataRepository(
         remote.createEvent(event)
     }
 
-    override suspend fun getEventById(eventId: String): Event {
+    override suspend fun getEventById(eventId: Int): Event {
         return local.getEventById(eventId)
     }
 

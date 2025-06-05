@@ -1,7 +1,7 @@
 package edu.iesam.diarybook.features.event.data.remote
 
 data class EventDbModel(
-    val id: String = "",
+    val id: Int = 0,
     val title: String = "",
     val description: String = "",
     val date: String = "",

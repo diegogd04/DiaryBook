@@ -16,7 +16,7 @@ class EventDetailViewModel(private val getEventByIdUseCase: GetEventByIdUseCase)
     private val _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> = _uiState
 
-    fun loadEvent(eventId: String) {
+    fun loadEvent(eventId: Int) {
         viewModelScope.launch(Dispatchers.IO) {
             val event = getEventByIdUseCase(eventId)
             _uiState.postValue(UiState(event))
