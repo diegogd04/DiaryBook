@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import edu.iesam.diarybook.R
 import edu.iesam.diarybook.databinding.ViewActivityItemBinding
 import edu.iesam.diarybook.features.event.domain.Event
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 
 class EventViewHolder(
     private val view: View,
@@ -24,12 +27,28 @@ class EventViewHolder(
             title.apply {
                 text = item.title
             }.setTextColor(color)
+            description.text = item.description
             cardViewItem.apply {
                 strokeColor = color
                 setOnClickListener {
                     onItemClickListener(item)
                 }
+                val eventDateTime = getDateTimeMillis(item.date, item.hour)
+                if (System.currentTimeMillis() > eventDateTime) {
+                    icFinalized.apply {
+                        setColorFilter(color)
+                        visibility = View.VISIBLE
+                    }
+                }
             }
         }
+    }
+
+    private fun getDateTimeMillis(date: String, hour: String): Long {
+        val eventDateTimeString = "$date $hour"
+        val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
+        val eventDateTime = LocalDateTime.parse(eventDateTimeString, formatter)
+
+        return eventDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
     }
 }
