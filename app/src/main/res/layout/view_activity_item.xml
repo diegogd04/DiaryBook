@@ -39,8 +39,16 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ic_completed"
-            style="@style/activity_item_ic_completed"
+            style="@style/activity_item_ic_completed_finalized"
             android:src="@drawable/ic_completed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ic_finalized"
+            style="@style/activity_item_ic_completed_finalized"
+            android:src="@drawable/ic_finalized"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
