@@ -8,5 +8,5 @@ class Task(
     description: String,
     time: Long,
     userId: String,
-    val completed: Boolean,
+    var completed: Boolean,
 ) : Activity(id, title, description, time, userId)

@@ -28,6 +28,12 @@ class TaskViewHolder(
                 setOnClickListener {
                     onItemClickListener(item)
                 }
+                if (item.completed) {
+                    icCompleted.apply {
+                        setColorFilter(color)
+                        visibility = View.VISIBLE
+                    }
+                }
             }
         }
     }
