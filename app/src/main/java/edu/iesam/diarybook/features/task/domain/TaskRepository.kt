@@ -9,4 +9,5 @@ interface TaskRepository {
     fun saveTask(task: Task)
     fun deleteTaskList(tasks: List<Task>)
     fun deleteTaskById(taskId: String)
+    suspend fun updateTaskCompleted(taskId: Int, completed: Boolean)
 }

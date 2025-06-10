@@ -46,4 +46,8 @@ class TaskDataRepository(
     override fun deleteTaskById(taskId: String) {
         TODO("Not yet implemented")
     }
+
+    override suspend fun updateTaskCompleted(taskId: Int, completed: Boolean) {
+        remote.updateTaskCompleted(taskId, completed)
+    }
 }

@@ -53,27 +53,58 @@ class TaskDetailFragment : Fragment() {
         binding.apply {
             description.text = task.description
         }
+        setUpCompleted(task)
+        setCompleted(task)
     }
 
     private fun toolbarEdit(task: Task) {
-        binding.toolbar.topAppBar.apply {
-            setNavigationIcon(R.drawable.ic_back_arrow)
-            setNavigationOnClickListener {
-                findNavController().navigateUp()
+        binding.toolbar.apply {
+            topAppBar.apply {
+                setNavigationIcon(R.drawable.ic_back_arrow)
+                setNavigationOnClickListener {
+                    findNavController().navigateUp()
+                }
+                setBackgroundColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.md_theme_tertiary
+                    )
+                )
+                setTitleTextColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.md_theme_onTertiary
+                    )
+                )
+                title = task.title
             }
-            setBackgroundColor(
-                ContextCompat.getColor(
-                    requireContext(),
-                    R.color.md_theme_tertiary
-                )
-            )
-            setTitleTextColor(
-                ContextCompat.getColor(
-                    requireContext(),
-                    R.color.md_theme_onTertiary
-                )
-            )
-            title = task.title
+        }
+    }
+
+    private fun setUpCompleted(task: Task) {
+        binding.toolbar.apply {
+            if (task.completed) {
+                buttonNoCompleted.visibility = View.VISIBLE
+                buttonCompleted.visibility = View.GONE
+            } else {
+                buttonNoCompleted.visibility = View.GONE
+                buttonCompleted.visibility = View.VISIBLE
+            }
+        }
+    }
+
+    private fun setCompleted(task: Task) {
+        binding.toolbar.apply {
+            buttonNoCompleted.setOnClickListener {
+                buttonNoCompleted.visibility = View.GONE
+                buttonCompleted.visibility = View.VISIBLE
+                viewModel.setTaskCompleted(task, false)
+            }
+            buttonCompleted.setOnClickListener {
+                buttonNoCompleted.visibility = View.VISIBLE
+                buttonCompleted.visibility = View.GONE
+                viewModel.setTaskCompleted(task, true)
+            }
         }
     }
 }

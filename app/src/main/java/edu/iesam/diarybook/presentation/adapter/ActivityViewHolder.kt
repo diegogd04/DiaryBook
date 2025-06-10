@@ -10,7 +10,8 @@ import edu.iesam.diarybook.features.event.domain.Event
 import edu.iesam.diarybook.features.task.domain.Task
 
 class ActivityViewHolder(
-    private val view: View) : RecyclerView.ViewHolder(view) {
+    private val view: View
+) : RecyclerView.ViewHolder(view) {
 
     private lateinit var binding: ViewActivityItemBinding
 
@@ -24,9 +25,13 @@ class ActivityViewHolder(
             )
             binding.cardViewItem.setOnClickListener {
             }
-        } else if (item is Task){
+        } else if (item is Task) {
             color = ContextCompat.getColor(view.context, R.color.md_theme_tertiary)
-            binding.cardViewItem.setOnClickListener {
+            if (item.completed) {
+                binding.icCompleted.apply {
+                    setColorFilter(color)
+                    visibility = View.VISIBLE
+                }
             }
         }
 

@@ -12,14 +12,15 @@
     <!-- Activity Item -->
     <style name="activity_item_color">
         <item name="android:layout_width">@dimen/activity_item_color_width</item>
+        <item name="android:layout_height">@dimen/floating_height</item>
+        <item name="android:orientation">vertical</item>
     </style>
 
     <style name="activity_item">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
         <item name="android:padding">@dimen/medium_margin_padding</item>
-        <item name="android:background">@color/md_theme_secondaryContainer</item>
     </style>
 
     <style name="activity_item_title">
@@ -32,6 +33,14 @@
     <style name="activity_item_cardview">
         <item name="android:layout_marginVertical">@dimen/small_margin_padding</item>
         <item name="strokeWidth">@dimen/general_stroke_width</item>
+        <item name="cardBackgroundColor">@color/md_theme_secondaryContainer</item>
+    </style>
+
+    <style name="activity_item_ic_completed">
+        <item name="android:layout_width">@dimen/general_icon_size</item>
+        <item name="android:layout_height">@dimen/general_icon_size</item>
+        <item name="android:layout_marginEnd">@dimen/medium_margin_padding</item>
+        <item name="android:visibility">gone</item>
     </style>
 
     <!-- Activity List -->
