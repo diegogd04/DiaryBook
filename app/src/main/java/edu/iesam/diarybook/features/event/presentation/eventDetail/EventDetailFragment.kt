@@ -13,6 +13,9 @@ import edu.iesam.diarybook.R
 import edu.iesam.diarybook.databinding.FragmentEventDetailBinding
 import edu.iesam.diarybook.features.event.domain.Event
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 
 class EventDetailFragment : Fragment() {
 
@@ -56,6 +59,24 @@ class EventDetailFragment : Fragment() {
             duration.text = event.duration
             description.text = event.description
         }
+        setOld(event)
+    }
+
+    private fun setOld(event: Event) {
+        val dateTimeNow = System.currentTimeMillis()
+        val eventDateTime = getDateTimeMillis(event.date, event.hour)
+
+        if (dateTimeNow > eventDateTime) {
+            viewModel.setEventOld(event, true)
+        }
+    }
+
+    private fun getDateTimeMillis(date: String, hour: String): Long {
+        val eventDateTimeString = "$date $hour"
+        val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
+        val eventDateTime = LocalDateTime.parse(eventDateTimeString, formatter)
+
+        return eventDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
     }
 
     private fun toolbarEdit(event: Event) {
