@@ -36,7 +36,7 @@
         <item name="cardBackgroundColor">@color/md_theme_secondaryContainer</item>
     </style>
 
-    <style name="activity_item_ic_completed">
+    <style name="activity_item_ic_completed_finalized">
         <item name="android:layout_width">@dimen/general_icon_size</item>
         <item name="android:layout_height">@dimen/general_icon_size</item>
         <item name="android:layout_marginEnd">@dimen/medium_margin_padding</item>

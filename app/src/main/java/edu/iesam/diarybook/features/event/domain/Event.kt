@@ -11,5 +11,5 @@ class Event(
     var date: String,
     var hour: String,
     var duration: String,
-    val old: Boolean
+    var old: Boolean
 ) : Activity(id, title, description, time, userId)

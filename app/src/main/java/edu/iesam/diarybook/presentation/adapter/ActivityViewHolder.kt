@@ -25,6 +25,12 @@ class ActivityViewHolder(
             )
             binding.cardViewItem.setOnClickListener {
             }
+            if (item.old) {
+                binding.icFinalized.apply {
+                    setColorFilter(color)
+                    visibility = View.VISIBLE
+                }
+            }
         } else if (item is Task) {
             color = ContextCompat.getColor(view.context, R.color.md_theme_tertiary)
             if (item.completed) {

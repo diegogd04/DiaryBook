@@ -47,4 +47,8 @@ class EventDataRepository(
     override fun deleteEventById(eventId: String) {
         TODO("Not yet implemented")
     }
+
+    override suspend fun updateEventOld(eventId: Int, old: Boolean) {
+        remote.updateEventOld(eventId, old)
+    }
 }

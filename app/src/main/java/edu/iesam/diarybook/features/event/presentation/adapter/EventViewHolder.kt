@@ -24,10 +24,17 @@ class EventViewHolder(
             title.apply {
                 text = item.title
             }.setTextColor(color)
+            description.text = item.description
             cardViewItem.apply {
                 strokeColor = color
                 setOnClickListener {
                     onItemClickListener(item)
+                }
+                if (item.old) {
+                    icFinalized.apply {
+                        setColorFilter(color)
+                        visibility = View.VISIBLE
+                    }
                 }
             }
         }

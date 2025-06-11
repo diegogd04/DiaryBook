@@ -9,4 +9,5 @@ interface EventRepository {
     fun saveEvent(event: Event)
     fun deleteEventList(events: List<Event>)
     fun deleteEventById(eventId: String)
+    suspend fun updateEventOld(eventId: Int, old: Boolean)
 }

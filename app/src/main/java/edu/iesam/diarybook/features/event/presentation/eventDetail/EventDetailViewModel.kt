@@ -11,7 +11,9 @@ import kotlinx.coroutines.launch
 import org.koin.android.annotation.KoinViewModel
 
 @KoinViewModel
-class EventDetailViewModel(private val getEventByIdUseCase: GetEventByIdUseCase) : ViewModel() {
+class EventDetailViewModel(
+    private val getEventByIdUseCase: GetEventByIdUseCase
+) : ViewModel() {
 
     private val _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> = _uiState

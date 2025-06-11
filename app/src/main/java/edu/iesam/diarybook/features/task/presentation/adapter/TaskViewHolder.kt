@@ -23,6 +23,7 @@ class TaskViewHolder(
             title.apply {
                 text = item.title
             }.setTextColor(color)
+            description.text = item.description
             cardViewItem.apply {
                 strokeColor = color
                 setOnClickListener {

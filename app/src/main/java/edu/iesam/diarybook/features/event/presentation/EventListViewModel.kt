@@ -6,12 +6,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import edu.iesam.diarybook.features.event.domain.Event
 import edu.iesam.diarybook.features.event.domain.GetEventListUseCase
+import edu.iesam.diarybook.features.event.domain.UpdateEventOldUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.koin.android.annotation.KoinViewModel
 
 @KoinViewModel
-class EventListViewModel(private val getEventListUseCase: GetEventListUseCase) : ViewModel() {
+class EventListViewModel(
+    private val getEventListUseCase: GetEventListUseCase,
+    private val updateEventOldUseCase: UpdateEventOldUseCase
+) : ViewModel() {
 
     private val _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> = _uiState
@@ -23,7 +27,15 @@ class EventListViewModel(private val getEventListUseCase: GetEventListUseCase) :
         }
     }
 
+    fun setEventOld(event: Event, old: Boolean) {
+        viewModelScope.launch(Dispatchers.IO) {
+            updateEventOldUseCase(event.id, old)
+            event.apply { this.old = old }
+        }
+    }
+
     data class UiState(
-        val events: List<Event> = emptyList()
+        val events: List<Event> = emptyList(),
+        val event: Event? = null
     )
 }
