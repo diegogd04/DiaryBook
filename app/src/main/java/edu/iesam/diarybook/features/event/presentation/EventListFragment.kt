@@ -14,6 +14,9 @@ import edu.iesam.diarybook.databinding.FragmentActivityListBinding
 import edu.iesam.diarybook.features.event.domain.Event
 import edu.iesam.diarybook.features.event.presentation.adapter.EventAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 
 class EventListFragment : Fragment() {
 
@@ -58,9 +61,29 @@ class EventListFragment : Fragment() {
 
     private fun setUpObserver() {
         val observer = Observer<EventListViewModel.UiState> { uiState ->
+            setEventsOld(uiState.events)
             bindData(uiState.events)
         }
         viewModel.uiState.observe(viewLifecycleOwner, observer)
+    }
+
+    private fun setEventsOld(events: List<Event>) {
+        val dateTimeNow = System.currentTimeMillis()
+
+        events.map { event ->
+            val eventDateTime = getDateTimeMillis(event.date, event.hour)
+            if (dateTimeNow > eventDateTime) {
+                viewModel.setEventOld(event, true)
+            }
+        }
+    }
+
+    private fun getDateTimeMillis(date: String, hour: String): Long {
+        val eventDateTimeString = "$date $hour"
+        val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
+        val eventDateTime = LocalDateTime.parse(eventDateTimeString, formatter)
+
+        return eventDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
     }
 
     private fun bindData(events: List<Event>) {
