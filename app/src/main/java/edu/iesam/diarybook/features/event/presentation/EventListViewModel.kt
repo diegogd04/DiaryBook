@@ -35,7 +35,6 @@ class EventListViewModel(
     }
 
     data class UiState(
-        val events: List<Event> = emptyList(),
-        val event: Event? = null
+        val events: List<Event> = emptyList()
     )
 }

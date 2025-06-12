@@ -23,6 +23,30 @@ class EventDbLocalDataSource(private val eventDao: EventDao) {
         }
     }
 
+    fun getCountPendingEventList(events: List<Event>): Int {
+        var pendingEventCount = 0
+
+        events.map { event ->
+            if (!event.old) {
+                pendingEventCount++
+            }
+        }
+
+        return pendingEventCount
+    }
+
+    fun getCountCompletedEventList(events: List<Event>): Int {
+        var completedEventCount = 0
+
+        events.map { event ->
+            if (event.old) {
+                completedEventCount++
+            }
+        }
+
+        return completedEventCount
+    }
+
     fun saveEventList(events: List<Event>) {
         val ms = System.currentTimeMillis()
 

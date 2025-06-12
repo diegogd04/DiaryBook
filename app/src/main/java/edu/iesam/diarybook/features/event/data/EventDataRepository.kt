@@ -51,4 +51,12 @@ class EventDataRepository(
     override suspend fun updateEventOld(eventId: Int, old: Boolean) {
         remote.updateEventOld(eventId, old)
     }
+
+    override suspend fun getCountPendingEventList(events: List<Event>): Int {
+        return local.getCountPendingEventList(events)
+    }
+
+    override suspend fun getCountCompletedEventList(events: List<Event>): Int {
+        return local.getCountCompletedEventList(events)
+    }
 }

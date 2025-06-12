@@ -38,6 +38,7 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.loadUser()
+        viewModel.getCountStatsEventList()
         setUpObserver()
         managerAccount()
     }
@@ -51,6 +52,8 @@ class ProfileFragment : Fragment() {
                 photo.loadUrl(uiState.user?.photo)
                 title.text = getString(R.string.profile_head_title, uiState.user?.name)
                 email.text = uiState.user?.email
+                pendingActivities.eventsCont.text = uiState.countPendingEvents.toString()
+                completedActivities.eventsCont.text = uiState.countCompletedEvents.toString()
             }
         }
         return viewModel.uiState.observe(viewLifecycleOwner, observer)
