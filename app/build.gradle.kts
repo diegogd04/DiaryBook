@@ -80,6 +80,10 @@ dependencies {
     implementation(libs.coil)
     implementation(libs.coil.network)
 
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

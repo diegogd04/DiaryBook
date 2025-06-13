@@ -37,6 +37,9 @@ splashScreenVersion = "1.0.1"
 # Coil
 coilVersion = "3.2.0"
 
+# Retrofit
+retrofitVersion = "2.9.0"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -76,6 +79,10 @@ splashscreen = { group = "androidx.core", name = "core-splashscreen", version.re
 # Coil
 coil = { group = "io.coil-kt.coil3", name = "coil", version.ref = "coilVersion" }
 coil_network = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coilVersion" }
+
+# Retrofit
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion" }
+retrofit-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
