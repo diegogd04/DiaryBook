@@ -50,4 +50,12 @@ class TaskDataRepository(
     override suspend fun updateTaskCompleted(taskId: Int, completed: Boolean) {
         remote.updateTaskCompleted(taskId, completed)
     }
+
+    override suspend fun getPendingTaskList(tasks: List<Task>): List<Task> {
+        return local.getPendingTaskList(tasks)
+    }
+
+    override suspend fun getCompletedTaskList(tasks: List<Task>): List<Task> {
+        return local.getCompletedTaskList(tasks)
+    }
 }

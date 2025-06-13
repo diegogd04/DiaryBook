@@ -10,6 +10,6 @@ interface EventRepository {
     fun deleteEventList(events: List<Event>)
     fun deleteEventById(eventId: String)
     suspend fun updateEventOld(eventId: Int, old: Boolean)
-    suspend fun getCountPendingEventList(events: List<Event>): Int
-    suspend fun getCountCompletedEventList(events: List<Event>): Int
+    suspend fun getPendingEventList(events: List<Event>): List<Event>
+    suspend fun getCompletedEventList(events: List<Event>): List<Event>
 }

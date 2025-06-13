@@ -23,28 +23,28 @@ class EventDbLocalDataSource(private val eventDao: EventDao) {
         }
     }
 
-    fun getCountPendingEventList(events: List<Event>): Int {
-        var pendingEventCount = 0
+    fun getPendingEventList(events: List<Event>): List<Event> {
+        val pendingEventList: MutableList<Event> = mutableListOf()
 
         events.map { event ->
             if (!event.old) {
-                pendingEventCount++
+                pendingEventList.add(event)
             }
         }
 
-        return pendingEventCount
+        return pendingEventList
     }
 
-    fun getCountCompletedEventList(events: List<Event>): Int {
-        var completedEventCount = 0
+    fun getCompletedEventList(events: List<Event>): List<Event> {
+        val completedEventList: MutableList<Event> = mutableListOf()
 
         events.map { event ->
             if (event.old) {
-                completedEventCount++
+                completedEventList.add(event)
             }
         }
 
-        return completedEventCount
+        return completedEventList
     }
 
     fun saveEventList(events: List<Event>) {

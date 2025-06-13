@@ -39,6 +39,7 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.loadUser()
         viewModel.getCountStatsEventList()
+        viewModel.getCountStatsTaskList()
         setUpObserver()
         managerAccount()
     }
@@ -52,8 +53,14 @@ class ProfileFragment : Fragment() {
                 photo.loadUrl(uiState.user?.photo)
                 title.text = getString(R.string.profile_head_title, uiState.user?.name)
                 email.text = uiState.user?.email
-                pendingActivities.eventsCont.text = uiState.countPendingEvents.toString()
-                completedActivities.eventsCont.text = uiState.countCompletedEvents.toString()
+                pendingActivities.apply {
+                    eventsCont.text = uiState.countPendingEvents.toString()
+                    tasksCont.text = uiState.countPendingTasks.toString()
+                }
+                completedActivities.apply {
+                    eventsCont.text = uiState.countCompletedEvents.toString()
+                    tasksCont.text = uiState.countCompletedTasks.toString()
+                }
             }
         }
         return viewModel.uiState.observe(viewLifecycleOwner, observer)

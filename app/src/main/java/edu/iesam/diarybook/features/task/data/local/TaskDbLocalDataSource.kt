@@ -23,6 +23,30 @@ class TaskDbLocalDataSource(private val taskDao: TaskDao) {
         }
     }
 
+    fun getPendingTaskList(tasks: List<Task>): List<Task> {
+        val pendingTaskList: MutableList<Task> = mutableListOf()
+
+        tasks.map { task ->
+            if (!task.completed) {
+                pendingTaskList.add(task)
+            }
+        }
+
+        return pendingTaskList
+    }
+
+    fun getCompletedTaskList(tasks: List<Task>): List<Task> {
+        val completedTaskList: MutableList<Task> = mutableListOf()
+
+        tasks.map { task ->
+            if (task.completed) {
+                completedTaskList.add(task)
+            }
+        }
+
+        return completedTaskList
+    }
+
     fun saveTaskList(tasks: List<Task>) {
         val ms = System.currentTimeMillis()
 
