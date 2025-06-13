@@ -91,4 +91,8 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        style="@style/event_detail_image" />
+
 </LinearLayout>

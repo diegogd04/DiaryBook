@@ -200,6 +200,13 @@
         <item name="android:layout_marginBottom">@dimen/medium_margin_padding</item>
     </style>
 
+    <!-- Activity Detail -->
+    <style name="event_detail_image">
+        <item name="android:layout_width">@dimen/event_detail_image_size</item>
+        <item name="android:layout_height">@dimen/event_detail_image_size</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
     <!-- Bottom App Bar -->
     <style name="bottom_app_bar_today_button">
         <item name="android:layout_width">@dimen/bottom_app_bar_today_button_size</item>

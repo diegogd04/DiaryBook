@@ -12,7 +12,8 @@ fun EventEntity.toModel(): Event {
         this.date,
         this.hour,
         this.duration,
-        this.old
+        this.old,
+        this.image
     )
 }
 
@@ -27,6 +28,7 @@ fun Event.toEntity(ms: Long): EventEntity {
         this.hour,
         this.duration,
         this.old,
+        this.image,
         ms
     )
 }

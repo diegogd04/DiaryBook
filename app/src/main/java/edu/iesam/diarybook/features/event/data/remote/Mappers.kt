@@ -12,7 +12,8 @@ fun EventDbModel.toModel(): Event {
         this.date,
         this.hour,
         this.duration,
-        this.old
+        this.old,
+        this.image
     )
 }
 
@@ -26,6 +27,7 @@ fun Event.toEventDbModel(): EventDbModel {
         this.duration,
         this.old,
         this.time,
-        this.userId
+        this.userId,
+        this.image
     )
 }

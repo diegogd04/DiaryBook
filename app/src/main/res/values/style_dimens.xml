@@ -47,4 +47,7 @@
     <dimen name="user_delete_dialog_icon_size">60dp</dimen>
     <dimen name="user_delete_dialog_button_cancel_stroke_width">1dp</dimen>
 
+    <!-- Event Detail -->
+    <dimen name="event_detail_image_size">250dp</dimen>
+
 </resources>

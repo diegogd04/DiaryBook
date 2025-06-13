@@ -1,5 +1,7 @@
 package edu.iesam.diarybook.features.event.data.remote
 
+import android.net.Uri
+
 data class EventDbModel(
     val id: Int = 0,
     val title: String = "",
@@ -9,5 +11,6 @@ data class EventDbModel(
     val duration: String = "",
     val old: Boolean = false,
     val time: Long = 0,
-    val userId: String = ""
+    val userId: String = "",
+    val image: Uri
 )
