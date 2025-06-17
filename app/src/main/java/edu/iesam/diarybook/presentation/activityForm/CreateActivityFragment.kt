@@ -3,17 +3,21 @@ package edu.iesam.diarybook.presentation.activityForm
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import edu.iesam.diarybook.R
 import edu.iesam.diarybook.databinding.FragmentCreateActivityBinding
 import edu.iesam.diarybook.features.event.domain.Event
 import edu.iesam.diarybook.features.task.domain.Task
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.Calendar
 import kotlin.random.Random
@@ -24,7 +28,7 @@ class CreateActivityFragment : Fragment() {
     private val binding get() = _binding!!
     private val viewModel: CreateActivityViewModel by viewModel()
     private val currentUserId get() = FirebaseAuth.getInstance().currentUser?.uid
-    private val event = Event(0, "", "", 0, "", "", "", "", false)
+    private val event = Event(0, "", "", 0, "", "", "", "", false, "")
     private val task = Task(0, "", "", 0, "", false)
 
     override fun onCreateView(
@@ -126,9 +130,16 @@ class CreateActivityFragment : Fragment() {
             createFormTask.createFormTask.visibility = View.GONE
             createButton.setOnClickListener {
                 val currentTime = System.currentTimeMillis()
-                bindDataEvent(currentTime)
-                viewModel.createEvent(event)
-                findNavController().navigateUp()
+                lifecycleScope.launch {
+                    try {
+                        bindDataEvent(currentTime)
+                        viewModel.createEvent(event)
+                        delay(100)
+                        findNavController().navigateUp()
+                    } catch (e: Exception) {
+                        Log.d("@dev", "Error: $e")
+                    }
+                }
             }
         }
     }

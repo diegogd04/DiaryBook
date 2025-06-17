@@ -1,6 +1,5 @@
 package edu.iesam.diarybook.features.event.domain
 
-import android.net.Uri
 import edu.iesam.diarybook.domain.Activity
 
 class Event(
@@ -13,5 +12,5 @@ class Event(
     var hour: String,
     var duration: String,
     var old: Boolean,
-    val image: Uri
+    var image: String
 ) : Activity(id, title, description, time, userId)

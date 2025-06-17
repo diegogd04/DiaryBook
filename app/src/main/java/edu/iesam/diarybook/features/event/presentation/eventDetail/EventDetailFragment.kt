@@ -1,5 +1,6 @@
 package edu.iesam.diarybook.features.event.presentation.eventDetail
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import edu.iesam.diarybook.R
+import edu.iesam.diarybook.app.presentation.loadUrl
 import edu.iesam.diarybook.databinding.FragmentEventDetailBinding
 import edu.iesam.diarybook.features.event.domain.Event
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -55,6 +57,7 @@ class EventDetailFragment : Fragment() {
             hour.text = event.hour
             duration.text = event.duration
             description.text = event.description
+            image.loadUrl(Uri.parse(event.image))
         }
     }
 

@@ -1,16 +1,34 @@
 package edu.iesam.diarybook.features.event.data.remote
 
+import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QuerySnapshot
 import edu.iesam.diarybook.features.event.domain.Event
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withContext
+import okhttp3.FormBody
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.RequestBody
+import org.json.JSONObject
 import org.koin.core.annotation.Single
+import java.util.concurrent.TimeUnit
 
 @Single
-class EventFirebaseRemoteDataSource(private val firestore: FirebaseFirestore) {
+class EventFirebaseRemoteDataSource(
+    private val firestore: FirebaseFirestore
+) {
 
     private val userId get() = FirebaseAuth.getInstance().currentUser?.uid
+    private val url = "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev"
+    private val client = OkHttpClient.Builder()
+        .readTimeout(120, TimeUnit.SECONDS)
+        .build()
+    private val token = "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"
+    private val apiKey = "5ff5aeaa84c30dad03669b307bf95125"
 
     suspend fun getEventList(): List<Event> {
         val events = firestore.collection("events")
@@ -25,6 +43,67 @@ class EventFirebaseRemoteDataSource(private val firestore: FirebaseFirestore) {
     }
 
     suspend fun createEvent(event: Event) {
+        val requestBody = JSONObject()
+            .put("inputs", event.title)
+            .toString()
+
+        val body = RequestBody.create(
+            "application/json".toMediaTypeOrNull(),
+            requestBody
+        )
+
+        val request = Request.Builder()
+            .url(url)
+            .addHeader("Authorization", "Bearer $token")
+            .post(body)
+            .build()
+
+        val response = withContext(Dispatchers.IO) {
+            client.newCall(request).execute()
+        }
+        Log.d("@dev", "Respuesta: ${response.body.toString()}")
+        val imageBytes = response.body?.bytes()
+        Log.d("@dev", "Respuesta cruda: $imageBytes")
+
+        val imageBase64 =
+            android.util.Base64.encodeToString(imageBytes, android.util.Base64.NO_WRAP)
+        val requestBodyUpload = FormBody.Builder()
+            .add("key", apiKey)
+            .add("image", imageBase64)
+            .build()
+        val requestUpload = Request.Builder()
+            .url("https://api.imgbb.com/1/upload")
+            .post(requestBodyUpload)
+            .build()
+
+        val responseUpload = withContext(Dispatchers.IO) {
+            try {
+                client.newCall(requestUpload).execute().use { response ->
+                    val responseString = response.body?.string()
+                    Log.d("@dev", "Respuesta imgbb: $responseString")
+
+                    val json = JSONObject(responseString ?: "")
+                    if (json.optBoolean("success")) {
+                        json.getJSONObject("data").getString("url")
+                    } else {
+                        Log.e(
+                            "@dev",
+                            "Error al subir a imgbb: ${
+                                json.optJSONObject("error")?.getString("message")
+                            }"
+                        )
+                    }
+                }
+            } catch (e: Exception) {
+                Log.e("@dev", "Error de red: ${e.message}")
+            }
+        }
+
+        /*val json = JSONObject(responseUpload.body?.string() ?: "")
+        Log.d("@dev", "Json: $json")
+        val imageUrl = json.getJSONObject("data").getString("url")
+        event.image = imageUrl*/
+
         firestore.collection("events")
             .add(event.toEventDbModel())
             .await()

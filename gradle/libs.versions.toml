@@ -5,7 +5,7 @@ coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-appcompat = "1.7.0"
+appcompat = "1.7.1"
 material = "1.12.0"
 activity = "1.10.1"
 constraintlayout = "2.2.1"
@@ -18,7 +18,7 @@ firebaseFirestore = "25.1.4"
 firebaseAuth = "23.2.1"
 
 # Lifecycle ViewModel
-lifecycleVersion = "2.9.0"
+lifecycleVersion = "2.9.1"
 
 # Koin
 koinAndroidVersion = "4.0.3"
@@ -38,7 +38,14 @@ splashScreenVersion = "1.0.1"
 coilVersion = "3.2.0"
 
 # Retrofit
-retrofitVersion = "2.9.0"
+retrofitVersion = "2.11.0"
+
+# OpenAi
+openaiVersion = "4.0.1"
+
+# Ktor
+ktorVersion = "3.0.0"
+firebaseStorage = "21.0.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -50,10 +57,8 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 
-# Firebase Firestore
+# Firebase
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
-
-# Firebase Auth
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 
 # Lifecycle ViewModel
@@ -83,6 +88,18 @@ coil_network = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", versi
 # Retrofit
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion" }
 retrofit-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion" }
+
+# OpenAi
+openai = { group = "com.aallam.openai", name = "openai-client", version.ref = "openaiVersion" }
+
+# Ktor
+ktor-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktorVersion" }
+ktor-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktorVersion" }
+ktor-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktorVersion" }
+ktor-plugins = { group = "io.ktor", name = "ktor-client-plugins", version.ref = "ktorVersion" }
+ktor-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktorVersion" }
+ktor-serialization = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktorVersion" }
+google-firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

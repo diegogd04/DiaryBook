@@ -56,6 +56,9 @@ dependencies {
     // Firebase Auth
     implementation(libs.firebase.auth)
 
+    // Firebase Storage
+    implementation(libs.google.firebase.storage)
+
     // Lifecycle ViewModel
     implementation(libs.lifecyle.viewmodel)
 
@@ -83,6 +86,17 @@ dependencies {
     // Retrofit
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter)
+
+    // OpenAi
+    implementation(libs.openai)
+
+    // Ktor
+    implementation(libs.ktor.okhttp)
+    implementation(libs.ktor.cio)
+    implementation(libs.ktor.core)
+    implementation(libs.ktor.plugins)
+    implementation(libs.ktor.negotiation)
+    implementation(libs.ktor.serialization)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

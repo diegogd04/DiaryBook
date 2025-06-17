@@ -21,11 +21,9 @@ class CreateActivityViewModel(
     private val _uiState = MutableLiveData<UiState>()
     private val uiState: LiveData<UiState> get() = _uiState
 
-    fun createEvent(event: Event) {
-        viewModelScope.launch(Dispatchers.IO) {
+    suspend fun createEvent(event: Event) {
             createEventUseCase(event)
             _uiState.postValue(UiState(event = event))
-        }
     }
 
     fun createTask(task: Task) {
