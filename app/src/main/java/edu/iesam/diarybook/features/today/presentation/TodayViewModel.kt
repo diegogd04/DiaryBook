@@ -8,8 +8,10 @@ import edu.iesam.diarybook.features.event.domain.Event
 import edu.iesam.diarybook.features.today.domain.GetEventsTodayUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import org.koin.android.annotation.KoinViewModel
 import java.time.LocalDate
 
+@KoinViewModel
 class TodayViewModel(private val getEventsTodayUseCase: GetEventsTodayUseCase) : ViewModel() {
 
     private val _uiState = MutableLiveData<UiState>()
