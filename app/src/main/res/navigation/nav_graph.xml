@@ -5,6 +5,10 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/activity_list_fragment">
 
+    <action
+        android:id="@+id/action_to_today_fragment"
+        app:destination="@id/today_fragment" />
+
     <fragment
         android:id="@+id/activity_list_fragment"
         android:name="edu.iesam.diarybook.presentation.ActivityListFragment"
@@ -90,5 +94,11 @@
         android:name="edu.iesam.diarybook.features.profile.presentation.ProfileFragment"
         android:label="@string/profile_title"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/today_fragment"
+        android:name="edu.iesam.diarybook.features.today.presentation.TodayFragment"
+        android:label="@string/today_title"
+        tools:layout="@layout/fragment_today" />
 
 </navigation>
