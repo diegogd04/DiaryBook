@@ -19,8 +19,8 @@ class EventFirebaseRemoteDataSource(
     private val client = OkHttpClient.Builder()
         .readTimeout(120, TimeUnit.SECONDS)
         .build()
-    //private val token = "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"
-    //private val apiKey = "5ff5aeaa84c30dad03669b307bf95125"
+    //private val token = ""
+    //private val apiKey = ""
 
     suspend fun getEventList(): List<Event> {
         val events = firestore.collection("events")
