@@ -50,4 +50,8 @@ class TaskDataRepository(
     override suspend fun updateTaskCompleted(taskId: Int, completed: Boolean) {
         remote.updateTaskCompleted(taskId, completed)
     }
+
+    override suspend fun addTaskToday(taskId: Int, today: Boolean) {
+        remote.addTaskToday(taskId, today)
+    }
 }

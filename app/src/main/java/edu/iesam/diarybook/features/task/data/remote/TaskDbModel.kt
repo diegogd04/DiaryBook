@@ -6,5 +6,6 @@ data class TaskDbModel(
     val description: String = "",
     val completed: Boolean = false,
     val time: Long = 0,
-    val userId: String = ""
+    val userId: String = "",
+    val today: Boolean = false
 )

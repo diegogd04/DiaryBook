@@ -3,6 +3,7 @@ package edu.iesam.diarybook
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -38,6 +39,11 @@ class MainActivity : AppCompatActivity() {
         bottomNavView.setOnItemSelectedListener { item ->
             setAccountView(item, navController)
             true
+        }
+
+        val buttonToday = findViewById<CardView>(R.id.today_button)
+        buttonToday.setOnClickListener {
+            navController.navigate(R.id.action_to_today_fragment)
         }
     }
 

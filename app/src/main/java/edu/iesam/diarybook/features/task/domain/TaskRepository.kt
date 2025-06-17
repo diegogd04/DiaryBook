@@ -10,4 +10,5 @@ interface TaskRepository {
     fun deleteTaskList(tasks: List<Task>)
     fun deleteTaskById(taskId: String)
     suspend fun updateTaskCompleted(taskId: Int, completed: Boolean)
+    suspend fun addTaskToday(taskId: Int, today: Boolean)
 }

@@ -35,6 +35,7 @@
     <string name="create_activity_title">Crear actividad</string>
     <string name="detail_event_title">Detalle del evento</string>
     <string name="detail_task_title">Detalle de la tarea</string>
+    <string name="today_task_add_title">Añadir tarea</string>
 
     <!-- Login Fragment y Create Fragment -->
     <string name="login_input_email">Correo electrónico</string>
