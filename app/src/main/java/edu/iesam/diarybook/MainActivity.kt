@@ -1,7 +1,6 @@
 package edu.iesam.diarybook
 
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -44,7 +43,6 @@ class MainActivity : AppCompatActivity() {
 
         val buttonToday = findViewById<CardView>(R.id.today_button)
         buttonToday.setOnClickListener {
-            Log.d("@dev", "botón pulsado")
             navController.navigate(R.id.action_to_today_fragment)
         }
     }
