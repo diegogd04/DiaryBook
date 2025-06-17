@@ -10,7 +10,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.iesam.diarybook.R
 import edu.iesam.diarybook.databinding.FragmentTodayBinding
-import edu.iesam.diarybook.features.event.domain.Event
+import edu.iesam.diarybook.domain.Activity
 import edu.iesam.diarybook.presentation.adapter.ActivityAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.time.LocalDate
@@ -56,18 +56,18 @@ class TodayFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.loadEventsToday(date)
+        viewModel.loadActivitiesToday(date)
         setUpObserver()
     }
 
     private fun setUpObserver() {
         val observer = Observer<TodayViewModel.UiState> { uiState ->
-            bindData(uiState.eventsToday)
+            bindData(uiState.activitiesToday)
         }
         viewModel.uiState.observe(viewLifecycleOwner, observer)
     }
 
-    private fun bindData(eventsToday: List<Event>) {
+    private fun bindData(eventsToday: List<Activity>) {
         activityAdapter.submitList(eventsToday)
     }
 }

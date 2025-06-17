@@ -25,7 +25,7 @@ class CreateActivityFragment : Fragment() {
     private val viewModel: CreateActivityViewModel by viewModel()
     private val currentUserId get() = FirebaseAuth.getInstance().currentUser?.uid
     private val event = Event(0, "", "", 0, "", "", "", "", false)
-    private val task = Task(0, "", "", 0, "", false)
+    private val task = Task(0, "", "", 0, "", false, false)
 
     override fun onCreateView(
         inflater: LayoutInflater,

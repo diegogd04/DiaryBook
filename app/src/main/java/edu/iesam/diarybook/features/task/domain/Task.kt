@@ -9,4 +9,5 @@ class Task(
     time: Long,
     userId: String,
     var completed: Boolean,
+    var today: Boolean
 ) : Activity(id, title, description, time, userId)

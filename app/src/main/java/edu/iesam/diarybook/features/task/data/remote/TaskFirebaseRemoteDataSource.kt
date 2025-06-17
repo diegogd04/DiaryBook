@@ -40,6 +40,16 @@ class TaskFirebaseRemoteDataSource(private val firestore: FirebaseFirestore) {
             .await()
     }
 
+    suspend fun addTaskToday(taskId: Int, today: Boolean) {
+        val querySnapshot = getTaskDocument(taskId)
+        val document = querySnapshot.documents[0].id
+
+        firestore.collection("tasks")
+            .document(document)
+            .update("today", today)
+            .await()
+    }
+
     private suspend fun getTaskDocument(taskId: Int): QuerySnapshot {
         val querySnapshot = firestore.collection("tasks")
             .whereEqualTo("id", taskId)
