@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.iesam.diarybook.R
 import edu.iesam.diarybook.databinding.FragmentTodayBinding
@@ -43,7 +44,12 @@ class TodayFragment : Fragment() {
 
             toolbar.apply {
                 topAppBar.title = getString(R.string.today_title)
-                buttonTaskTodayAdd.visibility = View.VISIBLE
+                buttonTaskTodayAdd.apply {
+                    visibility = View.VISIBLE
+                    setOnClickListener {
+                        findNavController().navigate(R.id.action_from_today_fragment_to_today_task_add_fragment)
+                    }
+                }
             }
         }
     }

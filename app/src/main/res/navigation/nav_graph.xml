@@ -99,6 +99,18 @@
         android:id="@+id/today_fragment"
         android:name="edu.iesam.diarybook.features.today.presentation.TodayFragment"
         android:label="@string/today_title"
-        tools:layout="@layout/fragment_today" />
+        tools:layout="@layout/fragment_today">
+
+        <action
+            android:id="@+id/action_from_today_fragment_to_today_task_add_fragment"
+            app:destination="@+id/today_task_add_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/today_task_add_fragment"
+        android:name="edu.iesam.diarybook.features.today.todayTaskAdd.TodayTaskAddFragment"
+        android:label="@string/today_task_add_title"
+        tools:layout="@layout/fragment_today_task_add" />
 
 </navigation>
